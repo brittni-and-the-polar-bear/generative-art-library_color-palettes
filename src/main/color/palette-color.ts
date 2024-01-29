@@ -15,3 +15,26 @@
  * See the GNU Affero General Public License for more details.
  */
 
+// color names derived from https://colornamer.robertcooper.me/
+
+/**
+ * @public
+ */
+interface PaletteColor {
+    rgb: {
+        r: number,
+        g: number,
+        b: number
+    },
+    hsl?: {
+        h: number,
+        s: number,
+        l: number
+    }
+    hexString: string,
+    name?: string,
+    htmlName?: string,
+    wikipediaName?: string
+}
+
+export {type PaletteColor};
