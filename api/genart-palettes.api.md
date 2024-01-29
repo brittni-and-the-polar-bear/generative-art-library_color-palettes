@@ -4,6 +4,11 @@
 
 ```ts
 
+import { StringMap } from '@batpb/genart-base';
+
+// @public (undocumented)
+export const _bb010b: PaletteColor;
+
 // @public (undocumented)
 export interface PaletteColor {
     // (undocumented)
@@ -27,6 +32,9 @@ export interface PaletteColor {
     // (undocumented)
     wikipediaName?: string;
 }
+
+// @public (undocumented)
+export const paletteColors: StringMap<PaletteColor>;
 
 // (No @packageDocumentation comment for this package)
 

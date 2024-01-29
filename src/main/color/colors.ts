@@ -18,15 +18,18 @@
 import {StringMap} from '@batpb/genart-base';
 import {PaletteColor} from "./palette-color";
 
-const colors: StringMap<PaletteColor> = new StringMap<PaletteColor>();
+/**
+ * @public
+ */
+const paletteColors: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 
 function addColor(color: PaletteColor): void {
     const key: string = color.hexString;
-    colors.setUndefinedKey(key, color, `color ${key} already exists in palette colors.`);
+    paletteColors.setUndefinedKey(key, color, `color ${key} already exists in palette colors.`);
 }
 
 import {_bb010b} from "./colors/bb010b";
 addColor(_bb010b);
 export {_bb010b};
 
-export {colors};
+export {paletteColors};
