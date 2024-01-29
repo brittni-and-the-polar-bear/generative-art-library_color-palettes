@@ -2,8 +2,8 @@
   "name": "@batpb/genart-palettes",
   "version": "0.2.0",
   "description": "Color palette classes and methods for the brittni and the polar bear generative art library.",
-  "main": "index.js",
-  "types": "",
+  "main": "./out/dist/src/main/index.js",
+  "types": "./out/dist/src/main/index.d.ts",
   "files": [
     "./.node-version",
     "./LICENSE",
