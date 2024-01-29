@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 Brittni Watkins.
+ * Copyright (C) 2023-2024 Brittni Watkins.
  *
  * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,5 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color';
-export * from './colors';
+import {StringMap} from '@batpb/genart-base';
+import {PaletteColor} from "./palette-color";
+
+const colors: StringMap<PaletteColor> = new StringMap<PaletteColor>();
+
+function addColor(color: PaletteColor): void {
+    const key: string = color.hexString;
+    colors.setUndefinedKey(key, color, `color ${key} already exists in palette colors.`);
+}
+
+import {_bb010b} from "./colors/bb010b";
+addColor(_bb010b);
+export {_bb010b};
+
+export {colors};

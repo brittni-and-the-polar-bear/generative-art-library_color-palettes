@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 Brittni Watkins.
+ * Copyright (C) 2023-2024 Brittni Watkins.
  *
  * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,5 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color';
-export * from './colors';
+import {PaletteColor} from "../palette-color";
+
+/**
+ * @public
+ */
+const _bb010b: PaletteColor = {
+    rgb: {r: 187, g: 1, b: 11},
+    hsl: {h: 357, s: 99, l: 37},
+    hexString: '#BB010B',
+    name: "bird's eye",
+    htmlName: 'firebrick',
+    wikipediaName: 'venetian red'
+};
+
+export {_bb010b};
