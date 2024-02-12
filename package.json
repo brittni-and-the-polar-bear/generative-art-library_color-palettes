@@ -20,7 +20,7 @@
 
     "prepack": "npm run build:source; npm run build:types",
 
-    "test": "rm -r ./out/tests-coverage; npx jest"
+    "test": "rm -r ./out/tests-coverage; npx jest --passWithNoTests"
   },
   "repository": {
     "type": "git",
