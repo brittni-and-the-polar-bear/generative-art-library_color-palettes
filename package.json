@@ -1,6 +1,6 @@
 {
   "name": "@batpb/genart-palettes",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Color palette classes and methods for the brittni and the polar bear generative art library.",
   "main": "./out/dist/src/main/index.js",
   "types": "./out/dist/src/main/index.d.ts",
@@ -20,7 +20,7 @@
 
     "prepack": "npm run build:source; npm run build:types",
 
-    "test": "rm -r ./out/tests-coverage; npx jest --passWithNoTests"
+    "test": "rm -r ./out/tests-coverage; npx jest"
   },
   "repository": {
     "type": "git",
@@ -55,7 +55,7 @@
   },
   "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes#readme",
   "dependencies": {
-    "@batpb/genart-base": "^0.2.1",
+    "@batpb/genart-base": "file:~/Desktop/npm-test/batpb-genart-base-0.2.2.tgz",
     "@types/p5": "^1.7.6",
     "p5": "^1.9.0",
     "tslib": "^2.6.2",
