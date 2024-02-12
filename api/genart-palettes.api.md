@@ -19,6 +19,9 @@ export const _bb010b: PaletteColor;
 export const _cd1624: PaletteColor;
 
 // @public (undocumented)
+export const _faf8f8: PaletteColor;
+
+// @public (undocumented)
 export interface PaletteColor {
     // (undocumented)
     hexString: string;

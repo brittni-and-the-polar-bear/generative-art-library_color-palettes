@@ -44,4 +44,8 @@ import {_cd1624} from './colors/cd1624';
 addColor(_cd1624);
 export {_cd1624};
 
+import {_faf8f8} from './colors/faf8f8';
+addColor(_faf8f8);
+export {_faf8f8};
+
 export {paletteColors};
