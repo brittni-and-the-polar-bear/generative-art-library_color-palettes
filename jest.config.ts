@@ -24,6 +24,7 @@ const config: JestConfigWithTsJest = {
     errorOnDeprecated: true,
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'mjs', 'cjs', 'json', 'node'],
     moduleNameMapper: {
+        '^color$': '<rootDir>/src/main/color',
     },
     testEnvironment: 'jsdom',
     testRegex: './src/test/.*\\.(test|spec)?\\.(ts|tsx)$',
