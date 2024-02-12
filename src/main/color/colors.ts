@@ -36,4 +36,8 @@ import {_cd1624} from './colors/cd1624';
 addColor(_cd1624);
 export {_cd1624};
 
+import {_006f57} from './colors/006f57';
+addColor(_006f57);
+export {_006f57};
+
 export {paletteColors};
