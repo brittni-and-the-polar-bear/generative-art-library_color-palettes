@@ -10,6 +10,9 @@ import { StringMap } from '@batpb/genart-base';
 export const _006f57: PaletteColor;
 
 // @public (undocumented)
+export const _23856d: PaletteColor;
+
+// @public (undocumented)
 export const _bb010b: PaletteColor;
 
 // @public (undocumented)

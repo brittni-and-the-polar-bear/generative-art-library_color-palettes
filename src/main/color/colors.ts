@@ -28,6 +28,14 @@ function addColor(color: PaletteColor): void {
     paletteColors.setUndefinedKey(key, color, `color ${key} already exists in palette colors.`);
 }
 
+import {_006f57} from './colors/006f57';
+addColor(_006f57);
+export {_006f57};
+
+import {_23856d} from './colors/23856d';
+addColor(_23856d);
+export {_23856d};
+
 import {_bb010b} from './colors/bb010b';
 addColor(_bb010b);
 export {_bb010b};
@@ -35,9 +43,5 @@ export {_bb010b};
 import {_cd1624} from './colors/cd1624';
 addColor(_cd1624);
 export {_cd1624};
-
-import {_006f57} from './colors/006f57';
-addColor(_006f57);
-export {_006f57};
 
 export {paletteColors};
