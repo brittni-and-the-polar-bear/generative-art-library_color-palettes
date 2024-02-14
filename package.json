@@ -18,9 +18,9 @@
 
     "lint": "npx eslint ./src",
 
-    "prepack": "npm run build:source; npm run build:types",
+    "test": "rm -r ./out/tests-coverage; npx jest",
 
-    "test": "rm -r ./out/tests-coverage; npx jest"
+    "prepack": "npm run build:source; npm run build:types"
   },
   "repository": {
     "type": "git",
@@ -64,8 +64,8 @@
   "devDependencies": {
     "@microsoft/api-extractor": "^7.40.1",
     "@types/jest": "^29.5.12",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
     "canvas": "^2.11.2",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
