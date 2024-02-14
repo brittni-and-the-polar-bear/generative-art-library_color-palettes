@@ -16,21 +16,17 @@
  */
 
 import {StringMap} from '@batpb/genart-base';
-import {Palette} from "../../../palette";
+import {Palette, addPalette} from "../../../palette";
 
+/**
+ * @public
+ */
 const christmasPalettes: StringMap<Palette> = new StringMap<Palette>();
 
-function addPalette(palette: Palette): void {
-    const key: string = palette.name;
-    christmasPalettes.setUndefinedKey(
-        key,
-        palette,
-        `palette ${key} already exists in christmas palettes.`
-    );
-}
+const paletteMapName: string = 'christmas palettes';
 
 import {mutedChristmas} from './muted-christmas';
-addPalette(mutedChristmas);
+addPalette(mutedChristmas, christmasPalettes, paletteMapName);
 export {mutedChristmas};
 
 export {christmasPalettes};

@@ -15,9 +15,14 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {StringMap} from '@batpb/genart-base';
+
 // noinspection ES6PreferShortImport
 import {PaletteColor} from '../color';
 
+/**
+ * @public
+ */
 interface Palette {
     name: string,
     source: string,
@@ -25,3 +30,35 @@ interface Palette {
 }
 
 export {type Palette};
+
+/**
+ * @public
+ * @param palette -
+ * @param paletteMap -
+ * @param paletteMapName -
+ */
+export function addPalette(palette: Palette, paletteMap: StringMap<Palette>, paletteMapName: string): void {
+    const key: string = palette.name;
+    paletteMap.setUndefinedKey(
+        key,
+        palette,
+        `palette ${key} already exists in ${paletteMapName}.`
+    );
+}
+
+/**
+ * @public
+ * @param palettes -
+ * @param paletteMap -
+ * @param paletteMapName -
+ */
+export function addPalettes(palettes: IterableIterator<Palette>, paletteMap: StringMap<Palette>, paletteMapName: string): void {
+    for (const palette of palettes) {
+        const key: string = palette.name;
+        paletteMap.setUndefinedKey(
+            key,
+            palette,
+            `palette ${key} already exists in ${paletteMapName}.`
+        );
+    }
+}

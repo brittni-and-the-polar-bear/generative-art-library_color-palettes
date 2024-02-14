@@ -20,8 +20,11 @@ import {Palette} from "../../../palette";
 // noinspection ES6PreferShortImport
 import {_006f57, _23856d, _bb010b, _cd1624, _faf8f8} from '../../../../color';
 
+/**
+ * @public
+ */
 const mutedChristmas: Palette = {
-    name: 'Muted Christmas',
+    name: 'muted christmas',
     source: 'https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8',
     colors: [
         _bb010b,

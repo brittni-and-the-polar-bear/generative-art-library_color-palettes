@@ -16,23 +16,17 @@
  */
 
 import {StringMap} from '@batpb/genart-base';
-import {Palette} from "../../palette";
+import {Palette, addPalettes} from "../../palette";
 
+/**
+ * @public
+ */
 const holidayPalettes: StringMap<Palette> = new StringMap<Palette>();
 
-function addPalettes(palettes: IterableIterator<Palette>): void {
-    for (const palette of palettes) {
-        const key: string = palette.name;
-        holidayPalettes.setUndefinedKey(
-            key,
-            palette,
-            `palette ${key} already exists in holiday palettes.`
-        );
-    }
-}
+const paletteMapName: string = 'holiday palettes';
 
 import {christmasPalettes} from './christmas';
-addPalettes(christmasPalettes.values);
-export {christmasPalettes};
+addPalettes(christmasPalettes.values, holidayPalettes, paletteMapName);
 
 export {holidayPalettes};
+export * from './christmas';
