@@ -15,19 +15,23 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {christmasPalettes, mutedChristmas} from "../../../../../main";
-import {checkForPaletteInMap, checkForValidPaletteMap} from "../../index";
+import {_006f57, _23856d, _bb010b, _cd1624, _faf8f8, mutedChristmas} from "../../../../../main";
+import {checkForValidPalette} from "../../index";
 
-describe('christmas palettes test', (): void => {
-    test('christmas palettes map exists', (): void => {
-        checkForValidPaletteMap(christmasPalettes);
-    });
+describe('muted christmas palette tests', (): void => {
+    test('muted christmas palette exists', (): void => {
+        checkForValidPalette(mutedChristmas);
+    })
 
     test.each([
-        {palette: mutedChristmas, name: mutedChristmas.name}
-    ])('$# successful addition of palette: $name',
-        ({palette}): void => {
-            checkForPaletteInMap(palette, christmasPalettes);
+        {color: _006f57, hexString: _006f57.hexString},
+        {color: _23856d, hexString: _23856d.hexString},
+        {color: _bb010b, hexString: _bb010b.hexString},
+        {color: _cd1624, hexString: _cd1624.hexString},
+        {color: _faf8f8, hexString: _faf8f8.hexString}
+    ])('$# color $hexString present in palette',
+        ({color}): void => {
+            expect(mutedChristmas.colors).toContain(color);
         }
     );
 });

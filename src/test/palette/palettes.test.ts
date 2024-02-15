@@ -15,7 +15,19 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - add tests for all palettes
-// test should feature a single palette from each directory
+import {checkForPaletteInMap, checkForValidPaletteMap} from "./palettes";
+import {allPalettes, mutedChristmas} from "../../main";
 
-test.todo('add later');
+describe('all palettes test', (): void => {
+    test('all palettes map exists', (): void => {
+        checkForValidPaletteMap(allPalettes);
+    });
+
+    test.each([
+        {palette: mutedChristmas, name: mutedChristmas.name} // holiday/christmas
+    ])('$# successful addition of palette: $name',
+        ({palette}): void => {
+            checkForPaletteInMap(palette, allPalettes);
+        }
+    );
+});

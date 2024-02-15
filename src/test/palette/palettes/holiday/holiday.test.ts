@@ -15,6 +15,19 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - add tests for holiday palettes
+import {holidayPalettes, mutedChristmas} from "../../../../main";
+import {checkForPaletteInMap, checkForValidPaletteMap} from "../index";
 
-test.todo('add later');
+describe('holiday palettes test', (): void => {
+    test('holiday palettes map exists', (): void => {
+        checkForValidPaletteMap(holidayPalettes);
+    });
+
+    test.each([
+        {palette: mutedChristmas, name: mutedChristmas.name}
+    ])('$# successful addition of palette: $name',
+        ({palette}): void => {
+            checkForPaletteInMap(palette, holidayPalettes);
+        }
+    );
+});
