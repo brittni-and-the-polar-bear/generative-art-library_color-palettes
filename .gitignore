@@ -1,0 +1,17 @@
+*.DS_Store
+
+# WebStorm
+.idea/
+
+# npm
+node_modules/
+
+# output
+out/
+
+# api extractor
+api/temp/
+api/genart-palettes.api.json
+
+# jest
+src/**/*.js

@@ -1,0 +1,72 @@
+{
+  "name": "@batpb/genart-palettes",
+  "version": "0.3.0",
+  "description": "Color palette classes and methods for the brittni and the polar bear generative art library.",
+  "main": "./out/dist/src/main/index.js",
+  "types": "./out/dist/src/main/index.d.ts",
+  "files": [
+    "./out/dist/src/main/**",
+    "./.node-version",
+    "./LICENSE",
+    "./package.json",
+    "./package-lock.json",
+    "./README.md"
+  ],
+  "scripts": {
+    "build:source": "rm -r ./out; npx tsc",
+    "build:types": "rm -r ./api; npx api-extractor run --local --verbose",
+    "lint": "npx eslint ./src",
+    "test": "rm -r ./out/tests-coverage; npx jest",
+    "prepack": "npm run build:source; npm run build:types"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes.git"
+  },
+  "keywords": [
+    "code art",
+    "generative art",
+    "p5",
+    "p5.js",
+    "p5js",
+    "p5js-library",
+    "typescript"
+  ],
+  "author": {
+    "name": "brittni and the polar bear",
+    "url": "https://linktr.ee/brittniandthepolarbear"
+  },
+  "contributors": [
+    {
+      "name": "brittni watkins",
+      "url": "https://linktr.ee/brittniwatkins"
+    },
+    {
+      "name": "azurepolarbear",
+      "url": "https://linktr.ee/azurepolarbear"
+    }
+  ],
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes/issues"
+  },
+  "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes#readme",
+  "dependencies": {
+    "@batpb/genart-base": "^0.3.0",
+    "@types/p5": "^1.7.6",
+    "p5": "^1.9.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.40.1",
+    "@types/jest": "^29.5.12",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
+    "canvas": "^2.11.2",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2"
+  }
+}
