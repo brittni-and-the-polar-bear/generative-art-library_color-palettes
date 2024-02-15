@@ -15,11 +15,8 @@
   "scripts": {
     "build:source": "rm -r ./out; npx tsc",
     "build:types": "rm -r ./api; npx api-extractor run --local --verbose",
-
     "lint": "npx eslint ./src",
-
     "test": "rm -r ./out/tests-coverage; npx jest",
-
     "prepack": "npm run build:source; npm run build:types"
   },
   "repository": {
@@ -55,7 +52,7 @@
   },
   "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes#readme",
   "dependencies": {
-    "@batpb/genart-base": "^0.2.1",
+    "@batpb/genart-base": "^0.3.0",
     "@types/p5": "^1.7.6",
     "p5": "^1.9.0",
     "tslib": "^2.6.2",
