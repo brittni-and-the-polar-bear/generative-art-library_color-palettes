@@ -17,3 +17,5 @@
 
 // TODO - add tests for all palettes
 // test should feature a single palette from each directory
+
+test.todo('add later');

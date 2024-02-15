@@ -15,4 +15,24 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - add tests for christmas palettes
+import {christmasPalettes, Palette} from "../../../../../main";
+
+describe('christmas palettes test', (): void => {
+    test('christmas palettes map exists', (): void => {
+        expect(christmasPalettes).toBeTruthy();
+        const keys: string[] = Array.from(christmasPalettes.keys);
+        const values: Palette[] = Array.from(christmasPalettes.values);
+        expect(keys.length).toBeGreaterThan(0);
+        expect(values.length).toBeGreaterThan(0);
+        expect(values.length).toBe(keys.length);
+    });
+
+    test.each([
+        {name: 'muted christmas'}
+    ])('$# successful addition of palette: $name',
+        ({name}): void => {
+            expect(christmasPalettes).toBeTruthy();
+            expect(new Set<string>(christmasPalettes.keys)).toContain(name);
+        }
+    );
+});
