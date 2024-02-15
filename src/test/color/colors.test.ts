@@ -20,7 +20,8 @@ import {paletteColors} from 'color';
 describe('colors tests', (): void => {
     test('successful addition of colors', (): void => {
         const keys: Set<string> = new Set<string>(paletteColors.keys);
-        expect(keys).toContain('#BB010B');
-        expect(keys).toContain('#CD1624');
+        expect(keys).toContain('#006F57'); // green
+        expect(keys).toContain('#CD1624'); // red
+        expect(keys).toContain('#FAF8F8'); // white
     });
-})
+});
