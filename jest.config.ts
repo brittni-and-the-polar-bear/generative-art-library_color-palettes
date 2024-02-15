@@ -23,6 +23,7 @@ const config: JestConfigWithTsJest = {
     coverageReporters: ['text', 'lcov'],
     errorOnDeprecated: true,
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'mjs', 'cjs', 'json', 'node'],
+    moduleNameMapper: {},
     testEnvironment: 'jsdom',
     testRegex: './src/test/.*\\.(test|spec)?\\.(ts|tsx)$',
     transform: {'^.+\\.(ts|tsx)$': 'ts-jest'},
