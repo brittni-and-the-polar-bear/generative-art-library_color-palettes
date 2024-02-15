@@ -15,5 +15,19 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './color';
-export * from './palette';
+import {christmasPalettes, mutedChristmas} from "../../../../../main";
+import {checkForPaletteInMap, checkForValidPaletteMap} from "../../index";
+
+describe('christmas palettes test', (): void => {
+    test('christmas palettes map exists', (): void => {
+        checkForValidPaletteMap(christmasPalettes);
+    });
+
+    test.each([
+        {palette: mutedChristmas, name: mutedChristmas.name}
+    ])('$# successful addition of palette: $name',
+        ({palette}): void => {
+            checkForPaletteInMap(palette, christmasPalettes);
+        }
+    );
+});

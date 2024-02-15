@@ -7,7 +7,47 @@
 import { StringMap } from '@batpb/genart-base';
 
 // @public (undocumented)
+export const _006f57: PaletteColor;
+
+// @public (undocumented)
+export const _23856d: PaletteColor;
+
+// @public (undocumented)
+export function addPalette(palette: Palette, paletteMap: StringMap<Palette>, paletteMapName: string): void;
+
+// @public (undocumented)
+export function addPalettes(palettes: IterableIterator<Palette>, paletteMap: StringMap<Palette>, paletteMapName: string): void;
+
+// @public (undocumented)
+export const allPalettes: StringMap<Palette>;
+
+// @public (undocumented)
 export const _bb010b: PaletteColor;
+
+// @public (undocumented)
+export const _cd1624: PaletteColor;
+
+// @public (undocumented)
+export const christmasPalettes: StringMap<Palette>;
+
+// @public (undocumented)
+export const _faf8f8: PaletteColor;
+
+// @public (undocumented)
+export const holidayPalettes: StringMap<Palette>;
+
+// @public (undocumented)
+export const mutedChristmas: Palette;
+
+// @public (undocumented)
+export interface Palette {
+    // (undocumented)
+    colors: PaletteColor[];
+    // (undocumented)
+    name: string;
+    // (undocumented)
+    source: string;
+}
 
 // @public (undocumented)
 export interface PaletteColor {

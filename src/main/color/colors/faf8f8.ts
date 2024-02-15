@@ -15,5 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './color';
-export * from './palette';
+import {PaletteColor} from '../palette-color';
+
+/**
+ * @public
+ */
+const _faf8f8: PaletteColor = {
+    rgb: {r: 250, g: 248, b: 248},
+    hsl: {h: 0, s: 17, l: 98},
+    hexString: '#FAF8F8',
+    name: 'doctor',
+    htmlName: 'snow',
+    wikipediaName: 'snow'
+}
+
+export {_faf8f8};

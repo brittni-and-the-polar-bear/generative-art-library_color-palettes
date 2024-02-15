@@ -15,5 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './color';
-export * from './palette';
+import {PaletteColor} from "../palette-color";
+
+/**
+ * @public
+ */
+const _006f57: PaletteColor = {
+    rgb: {r: 0, g: 111, b: 87},
+    hsl: {h: 167, s: 100, l: 22},
+    hexString: '#006F57',
+    name: 'teal dark green',
+    htmlName: 'teal',
+    wikipediaName: 'tropical rainforest'
+};
+
+export {_006f57};

@@ -15,5 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './color';
-export * from './palette';
+import {StringMap} from '@batpb/genart-base';
+import {Palette, addPalettes} from "../../palette";
+
+/**
+ * @public
+ */
+const holidayPalettes: StringMap<Palette> = new StringMap<Palette>();
+
+const paletteMapName: string = 'holiday palettes';
+
+import {christmasPalettes} from './christmas';
+addPalettes(christmasPalettes.values, holidayPalettes, paletteMapName);
+
+export {holidayPalettes};
+export * from './christmas';

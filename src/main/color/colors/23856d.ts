@@ -15,5 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './color';
-export * from './palette';
+import {PaletteColor} from "../palette-color";
+
+/**
+ * @public
+ */
+const _23856d: PaletteColor = {
+    rgb: {r: 35, g: 133, b: 109},
+    hsl: {h: 165, s: 58, l: 33},
+    hexString: '#23856D',
+    name: 'accent green blue',
+    htmlName: 'seagreen',
+    wikipediaName: 'myrtle green'
+};
+
+export {_23856d};

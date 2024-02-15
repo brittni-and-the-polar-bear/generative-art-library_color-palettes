@@ -1,6 +1,6 @@
 {
   "name": "@batpb/genart-palettes",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Color palette classes and methods for the brittni and the polar bear generative art library.",
   "main": "./out/dist/src/main/index.js",
   "types": "./out/dist/src/main/index.d.ts",
@@ -15,12 +15,9 @@
   "scripts": {
     "build:source": "rm -r ./out; npx tsc",
     "build:types": "rm -r ./api; npx api-extractor run --local --verbose",
-
     "lint": "npx eslint ./src",
-
-    "prepack": "npm run build:source; npm run build:types",
-
-    "test": "rm -r ./out/tests-coverage; npx jest --passWithNoTests"
+    "test": "rm -r ./out/tests-coverage; npx jest",
+    "prepack": "npm run build:source; npm run build:types"
   },
   "repository": {
     "type": "git",
@@ -55,7 +52,7 @@
   },
   "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes#readme",
   "dependencies": {
-    "@batpb/genart-base": "^0.2.1",
+    "@batpb/genart-base": "^0.3.0",
     "@types/p5": "^1.7.6",
     "p5": "^1.9.0",
     "tslib": "^2.6.2",
@@ -64,8 +61,8 @@
   "devDependencies": {
     "@microsoft/api-extractor": "^7.40.1",
     "@types/jest": "^29.5.12",
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
     "canvas": "^2.11.2",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",

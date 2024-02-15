@@ -15,5 +15,4 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './color';
-export * from './palette';
+// TODO - make and export valentines palette

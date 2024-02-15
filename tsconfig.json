@@ -2,11 +2,10 @@
   "compilerOptions": {
     /* Language and Environment */
     "target": "es6",
-    "paths": {
-    },
+    "paths": {},
 
     /* Modules */
-    "module": "es6",
+    "module": "umd",
     "moduleResolution": "node",
     "rootDirs": [
       "./src"
