@@ -15,7 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// noinspection ES6PreferShortImport
 import {PaletteColor} from "../palette-color";
 
 /**

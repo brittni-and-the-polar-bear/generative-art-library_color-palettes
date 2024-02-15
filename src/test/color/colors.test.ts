@@ -15,13 +15,44 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {paletteColors} from 'color';
+import {PaletteColor, paletteColors} from '../../main';
 
 describe('colors tests', (): void => {
-    test('successful addition of colors', (): void => {
-        const keys: Set<string> = new Set<string>(paletteColors.keys);
-        expect(keys).toContain('#006F57'); // green
-        expect(keys).toContain('#CD1624'); // red
-        expect(keys).toContain('#FAF8F8'); // white
+    test('palette colors map exists', (): void => {
+        expect(paletteColors).toBeTruthy();
+        const keys: string[] = Array.from(paletteColors.keys);
+        const values: PaletteColor[] = Array.from(paletteColors.values);
+        expect(keys.length).toBeGreaterThan(0);
+        expect(values.length).toBeGreaterThan(0);
+        expect(values.length).toBe(keys.length);
     });
+
+    test.each([
+        {hexString: '#006F57'},
+        {hexString: '#23856D'}
+    ])('$# successful addition of green color: $hexString',
+        ({hexString}): void => {
+            expect(paletteColors).toBeTruthy();
+            expect(new Set<string>(paletteColors.keys)).toContain(hexString);
+        }
+    );
+
+    test.each([
+        {hexString: '#BB010B'},
+        {hexString: '#CD1624'}
+    ])('$# successful addition of red color: $hexString',
+        ({hexString}): void => {
+            expect(paletteColors).toBeTruthy();
+            expect(new Set<string>(paletteColors.keys)).toContain(hexString);
+        }
+    );
+
+    test.each([
+        {hexString: '#FAF8F8'}
+    ])('$# successful addition of white color: $hexString',
+        ({hexString}): void => {
+            expect(paletteColors).toBeTruthy();
+            expect(new Set<string>(paletteColors.keys)).toContain(hexString);
+        }
+    );
 });

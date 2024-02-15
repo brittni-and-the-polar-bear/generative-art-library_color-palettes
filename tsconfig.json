@@ -2,9 +2,6 @@
   "compilerOptions": {
     /* Language and Environment */
     "target": "es6",
-    "paths": {
-      "color": ["./src/main/color"]
-    },
 
     /* Modules */
     "module": "umd",

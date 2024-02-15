@@ -16,8 +16,6 @@
  */
 
 import {StringMap} from '@batpb/genart-base';
-
-// noinspection ES6PreferShortImport
 import {PaletteColor} from '../color';
 
 /**

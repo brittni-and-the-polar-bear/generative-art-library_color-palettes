@@ -16,8 +16,6 @@
  */
 
 import {Palette} from "../../../palette";
-
-// noinspection ES6PreferShortImport
 import {_006f57, _23856d, _bb010b, _cd1624, _faf8f8} from '../../../../color';
 
 /**
