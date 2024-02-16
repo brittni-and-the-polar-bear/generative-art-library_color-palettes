@@ -44,6 +44,10 @@ import {_cd1624} from './colors/cd1624';
 addColor(_cd1624);
 export {_cd1624};
 
+import {_f48fb1} from "./colors/f48fb1";
+addColor(_f48fb1);
+export {_f48fb1};
+
 import {_f8bbd0} from "./colors/f8bbd0";
 addColor(_f8bbd0);
 export {_f8bbd0};

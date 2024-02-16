@@ -15,20 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Palette} from "../../../palette";
-import {_f48fb1, _f8bbd0, _fce4ec} from "../../../../color";
+import {PaletteColor} from "../palette-color";
 
 /**
  * @public
  */
-const glitter: Palette = {
-    name: 'glitter',
-    source: 'https://culrs.com/palette/fce4ecf8bbd0f48fb1f06292ec407a',
-    colors: [
-        _fce4ec,
-        _f8bbd0,
-        _f48fb1
-    ]
-}
+const _f48fb1: PaletteColor = {
+    hexString: '#F48FB1',
+    rgb: {r: 244, g: 143, b: 177},
+    hsl: {h: 340, s: 82, l: 76},
+    name: 'sachet pink',
+    htmlName: 'hotpink',
+    wikipediaName: 'vanilla ice'
+};
 
-export {glitter};
+export {_f48fb1};
