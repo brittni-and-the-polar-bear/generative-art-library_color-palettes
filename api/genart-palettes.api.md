@@ -31,6 +31,9 @@ export const _cd1624: PaletteColor;
 export const christmasPalettes: StringMap<Palette>;
 
 // @public (undocumented)
+export const _ec407a: PaletteColor;
+
+// @public (undocumented)
 export const _f06292: PaletteColor;
 
 // @public (undocumented)

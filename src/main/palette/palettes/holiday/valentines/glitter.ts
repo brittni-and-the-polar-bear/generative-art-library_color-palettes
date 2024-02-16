@@ -16,7 +16,7 @@
  */
 
 import {Palette} from "../../../palette";
-import {_f06292, _f48fb1, _f8bbd0, _fce4ec} from "../../../../color";
+import {_ec407a, _f06292, _f48fb1, _f8bbd0, _fce4ec} from "../../../../color";
 
 /**
  * @public
@@ -28,7 +28,8 @@ const glitter: Palette = {
         _fce4ec,
         _f8bbd0,
         _f48fb1,
-        _f06292
+        _f06292,
+        _ec407a
     ]
 }
 

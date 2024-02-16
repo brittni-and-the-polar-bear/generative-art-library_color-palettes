@@ -15,16 +15,12 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor, paletteColors} from '../../main';
+import {paletteColors} from '../../main';
+import {checkForValidStringMap} from '../index';
 
 describe('colors tests', (): void => {
     test('palette colors map exists', (): void => {
-        expect(paletteColors).toBeTruthy();
-        const keys: string[] = Array.from(paletteColors.keys);
-        const values: PaletteColor[] = Array.from(paletteColors.values);
-        expect(keys.length).toBeGreaterThan(0);
-        expect(values.length).toBeGreaterThan(0);
-        expect(values.length).toBe(keys.length);
+        checkForValidStringMap(paletteColors);
     });
 
     test.each([
@@ -48,6 +44,7 @@ describe('colors tests', (): void => {
     );
 
     test.each([
+        {hexString: '#EC407A'},
         {hexString: '#F06292'},
         {hexString: '#F48FB1'},
         {hexString: '#F8BBD0'}

@@ -15,22 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {christmasPalettes, mutedChristmas} from '../../../../../main';
+import {PaletteColor} from "../palette-color";
 
-import {checkForValidStringMap} from '../../../../index';
-import {checkForPaletteInMap} from '../../index';
+/**
+ * @public
+ */
+const _ec407a: PaletteColor = {
+    hexString: '#EC407A',
+    rgb: {r: 236, g: 64, b: 122},
+    hsl: {h: 340, s: 82, l: 59},
+    name: 'cerise pink',
+    htmlName: 'indianred',
+    wikipediaName: 'paradise pink'
+};
 
-
-describe('christmas palettes test', (): void => {
-    test('christmas palettes map exists', (): void => {
-        checkForValidStringMap(christmasPalettes);
-    });
-
-    test.each([
-        {palette: mutedChristmas, name: mutedChristmas.name}
-    ])('$# successful addition of palette: $name',
-        ({palette}): void => {
-            checkForPaletteInMap(palette, christmasPalettes);
-        }
-    );
-});
+export {_ec407a};

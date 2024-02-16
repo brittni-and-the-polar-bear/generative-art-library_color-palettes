@@ -15,22 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {christmasPalettes, mutedChristmas} from '../../../../../main';
+import {StringMap} from '@batpb/genart-base';
 
-import {checkForValidStringMap} from '../../../../index';
-import {checkForPaletteInMap} from '../../index';
+import {Palette, PaletteColor} from '../main';
 
-
-describe('christmas palettes test', (): void => {
-    test('christmas palettes map exists', (): void => {
-        checkForValidStringMap(christmasPalettes);
-    });
-
-    test.each([
-        {palette: mutedChristmas, name: mutedChristmas.name}
-    ])('$# successful addition of palette: $name',
-        ({palette}): void => {
-            checkForPaletteInMap(palette, christmasPalettes);
-        }
-    );
-});
+export function checkForValidStringMap(map: StringMap<Palette|PaletteColor>): void {
+    expect(map).toBeTruthy();
+    const keys: string[] = Array.from(map.keys);
+    const values: (Palette|PaletteColor)[] = Array.from(map.values);
+    expect(keys.length).toBeGreaterThan(0);
+    expect(values.length).toBeGreaterThan(0);
+    expect(values.length).toBe(keys.length);
+}

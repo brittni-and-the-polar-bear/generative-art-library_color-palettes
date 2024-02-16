@@ -15,12 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {holidayPalettes, mutedChristmas} from "../../../../main";
-import {checkForPaletteInMap, checkForValidPaletteMap} from "../index";
+import {holidayPalettes, mutedChristmas} from '../../../../main';
+
+import {checkForValidStringMap} from '../../../index';
+import {checkForPaletteInMap} from '../index';
+
 
 describe('holiday palettes test', (): void => {
     test('holiday palettes map exists', (): void => {
-        checkForValidPaletteMap(holidayPalettes);
+        checkForValidStringMap(holidayPalettes);
     });
 
     test.each([
