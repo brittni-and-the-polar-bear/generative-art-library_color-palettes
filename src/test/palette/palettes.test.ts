@@ -15,20 +15,24 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {allPalettes, mutedChristmas} from '../../main';
+import {allPalettes, glitter, mutedChristmas} from '../../main';
 
 import {checkForValidStringMap} from '../index';
-import {checkForPaletteInMap} from './palettes';
-
+import {buildPaletteTestArray, checkForPaletteInMap} from './palettes';
 
 describe('all palettes test', (): void => {
     test('all palettes map exists', (): void => {
         checkForValidStringMap(allPalettes);
     });
 
-    test.each([
-        {palette: mutedChristmas, name: mutedChristmas.name} // holiday/christmas
-    ])('$# successful addition of palette: $name',
+    test.each(
+        buildPaletteTestArray(
+            [
+                mutedChristmas, // holiday/christmas
+                glitter // holiday/valentines
+            ]
+        )
+    )('$# successful addition of palette: $name',
         ({palette}): void => {
             checkForPaletteInMap(palette, allPalettes);
         }

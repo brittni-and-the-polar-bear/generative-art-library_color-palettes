@@ -15,28 +15,28 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {_006f57, _23856d, _bb010b, _cd1624, _faf8f8, mutedChristmas} from "../../../../../main";
-
 import {buildPaletteColorTestArray, checkForValidPalette} from "../../index";
 
-describe('muted christmas palette tests', (): void => {
-    test('muted christmas palette exists', (): void => {
-        checkForValidPalette(mutedChristmas);
+import {_ec407a, _f06292, _f48fb1, _f8bbd0, _fce4ec, glitter} from "../../../../../main";
+
+describe('glitter palette tests', (): void => {
+    test('glitter palette exists', (): void => {
+        checkForValidPalette(glitter);
     })
 
     test.each(
         buildPaletteColorTestArray(
             [
-                _006f57,
-                _23856d,
-                _bb010b,
-                _cd1624,
-                _faf8f8
+                _fce4ec,
+                _f8bbd0,
+                _f48fb1,
+                _f06292,
+                _ec407a
             ]
         )
-    )('$# color $hexString present in muted christmas palette',
+    )('$# color $hexString present in glitter palette',
         ({color}): void => {
-            expect(mutedChristmas.colors).toContain(color);
+            expect(glitter.colors).toContain(color);
         }
     );
 });

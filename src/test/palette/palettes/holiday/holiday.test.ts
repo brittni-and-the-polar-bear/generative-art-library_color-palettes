@@ -15,10 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {holidayPalettes, mutedChristmas} from '../../../../main';
+import {glitter, holidayPalettes, mutedChristmas} from '../../../../main';
 
 import {checkForValidStringMap} from '../../../index';
-import {checkForPaletteInMap} from '../index';
+import {buildPaletteTestArray, checkForPaletteInMap} from '../index';
 
 
 describe('holiday palettes test', (): void => {
@@ -26,9 +26,14 @@ describe('holiday palettes test', (): void => {
         checkForValidStringMap(holidayPalettes);
     });
 
-    test.each([
-        {palette: mutedChristmas, name: mutedChristmas.name}
-    ])('$# successful addition of palette: $name',
+    test.each(
+        buildPaletteTestArray(
+            [
+                mutedChristmas,
+                glitter
+            ]
+        )
+    )('$# successful addition of palette: $name',
         ({palette}): void => {
             checkForPaletteInMap(palette, holidayPalettes);
         }

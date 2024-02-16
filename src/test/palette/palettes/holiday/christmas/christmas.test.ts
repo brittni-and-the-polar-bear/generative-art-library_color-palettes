@@ -18,7 +18,7 @@
 import {christmasPalettes, mutedChristmas} from '../../../../../main';
 
 import {checkForValidStringMap} from '../../../../index';
-import {checkForPaletteInMap} from '../../index';
+import {buildPaletteTestArray, checkForPaletteInMap} from '../../index';
 
 
 describe('christmas palettes test', (): void => {
@@ -26,9 +26,13 @@ describe('christmas palettes test', (): void => {
         checkForValidStringMap(christmasPalettes);
     });
 
-    test.each([
-        {palette: mutedChristmas, name: mutedChristmas.name}
-    ])('$# successful addition of palette: $name',
+    test.each(
+        buildPaletteTestArray(
+            [
+                mutedChristmas
+            ]
+        )
+    )('$# successful addition of palette: $name',
         ({palette}): void => {
             checkForPaletteInMap(palette, christmasPalettes);
         }

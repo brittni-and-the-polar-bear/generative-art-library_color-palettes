@@ -49,6 +49,9 @@ export const _faf8f8: PaletteColor;
 export const _fce4ec: PaletteColor;
 
 // @public (undocumented)
+export const glitter: Palette;
+
+// @public (undocumented)
 export const holidayPalettes: StringMap<Palette>;
 
 // @public (undocumented)
@@ -90,6 +93,9 @@ export interface PaletteColor {
 
 // @public (undocumented)
 export const paletteColors: StringMap<PaletteColor>;
+
+// @public (undocumented)
+export const valentinesPalettes: StringMap<Palette>;
 
 // (No @packageDocumentation comment for this package)
 

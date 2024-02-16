@@ -16,3 +16,19 @@
  */
 
 // TODO - make and export valentines palette
+
+import {StringMap} from '@batpb/genart-base';
+
+import {addPalette, Palette} from '../../../palette';
+
+/**
+ * @public
+ */
+const valentinesPalettes: StringMap<Palette> = new StringMap<Palette>();
+const paletteMapName: string = "valentine's day palettes";
+
+import {glitter} from './glitter';
+addPalette(glitter, valentinesPalettes, paletteMapName);
+export {glitter};
+
+export {valentinesPalettes};

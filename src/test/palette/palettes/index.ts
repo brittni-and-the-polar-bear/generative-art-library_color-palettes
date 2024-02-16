@@ -17,7 +17,7 @@
 
 import {StringMap} from '@batpb/genart-base';
 
-import {christmasPalettes, Palette} from '../../../main';
+import {Palette, PaletteColor} from '../../../main';
 
 export function checkForValidPalette(palette: Palette): void {
     expect(palette).toBeTruthy();
@@ -29,5 +29,27 @@ export function checkForValidPalette(palette: Palette): void {
 export function checkForPaletteInMap(palette: Palette, palettes: StringMap<Palette>): void {
     expect(palettes).toBeTruthy();
     checkForValidPalette(palette);
-    expect(new Set<string>(christmasPalettes.keys)).toContain(palette.name);
+    expect(new Set<string>(palettes.keys)).toContain(palette.name);
+}
+
+export function buildPaletteColorTestArray(colors: PaletteColor[]):
+    ({color: PaletteColor, hexString: string})[] {
+    const testArray: ({color: PaletteColor, hexString: string})[] = [];
+
+    for (const c of colors) {
+        testArray.push({color: c, hexString: c.hexString});
+    }
+
+    return testArray;
+}
+
+export function buildPaletteTestArray(palettes: Palette[]):
+    ({palette: Palette, name: string})[] {
+    const testArray: ({palette: Palette, name: string})[] = [];
+
+    for (const p of palettes) {
+        testArray.push({palette: p, name: p.name});
+    }
+
+    return testArray;
 }

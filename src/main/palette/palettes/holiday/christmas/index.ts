@@ -22,7 +22,6 @@ import {Palette, addPalette} from "../../../palette";
  * @public
  */
 const christmasPalettes: StringMap<Palette> = new StringMap<Palette>();
-
 const paletteMapName: string = 'christmas palettes';
 
 import {mutedChristmas} from './muted-christmas';
