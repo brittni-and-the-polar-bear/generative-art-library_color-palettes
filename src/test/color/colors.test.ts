@@ -48,6 +48,7 @@ describe('colors tests', (): void => {
     );
 
     test.each([
+        {hexString: '#F06292'},
         {hexString: '#F48FB1'},
         {hexString: '#F8BBD0'}
     ])('$# successful addition of pink color: $hexString',

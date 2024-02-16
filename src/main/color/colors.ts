@@ -44,11 +44,15 @@ import {_cd1624} from './colors/cd1624';
 addColor(_cd1624);
 export {_cd1624};
 
-import {_f48fb1} from "./colors/f48fb1";
+import {_f06292} from './colors/f06292';
+addColor(_f06292);
+export {_f06292};
+
+import {_f48fb1} from './colors/f48fb1';
 addColor(_f48fb1);
 export {_f48fb1};
 
-import {_f8bbd0} from "./colors/f8bbd0";
+import {_f8bbd0} from './colors/f8bbd0';
 addColor(_f8bbd0);
 export {_f8bbd0};
 
@@ -56,7 +60,7 @@ import {_faf8f8} from './colors/faf8f8';
 addColor(_faf8f8);
 export {_faf8f8};
 
-import {_fce4ec} from "./colors/fce4ec";
+import {_fce4ec} from './colors/fce4ec';
 addColor(_fce4ec);
 export {_fce4ec};
 

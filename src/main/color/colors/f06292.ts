@@ -15,26 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// color names derived from https://colornamer.robertcooper.me/
+import {PaletteColor} from "../palette-color";
 
 /**
  * @public
  */
-interface PaletteColor {
-    readonly rgb: {
-        readonly r: number,
-        readonly g: number,
-        readonly b: number
-    },
-    readonly hsl: {
-        readonly h: number,
-        readonly s: number,
-        readonly l: number
-    }
-    readonly hexString: string,
-    readonly name: string,
-    readonly htmlName: string,
-    readonly wikipediaName: string
-}
+const _f06292: PaletteColor = {
+    hexString: '#F06292',
+    rgb: {r: 240, g: 98, b: 146},
+    hsl: {h: 340, s: 83, l: 66},
+    name: 'medium pink',
+    htmlName: 'palevioletred',
+    wikipediaName: 'violet-red'
+};
 
-export {type PaletteColor};
+export {_f06292};

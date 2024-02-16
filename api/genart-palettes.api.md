@@ -31,6 +31,9 @@ export const _cd1624: PaletteColor;
 export const christmasPalettes: StringMap<Palette>;
 
 // @public (undocumented)
+export const _f06292: PaletteColor;
+
+// @public (undocumented)
 export const _f48fb1: PaletteColor;
 
 // @public (undocumented)
@@ -61,25 +64,25 @@ export interface Palette {
 // @public (undocumented)
 export interface PaletteColor {
     // (undocumented)
-    hexString: string;
+    readonly hexString: string;
     // (undocumented)
-    hsl?: {
-        h: number;
-        s: number;
-        l: number;
+    readonly hsl: {
+        readonly h: number;
+        readonly s: number;
+        readonly l: number;
     };
     // (undocumented)
-    htmlName?: string;
+    readonly htmlName: string;
     // (undocumented)
-    name?: string;
+    readonly name: string;
     // (undocumented)
-    rgb: {
-        r: number;
-        g: number;
-        b: number;
+    readonly rgb: {
+        readonly r: number;
+        readonly g: number;
+        readonly b: number;
     };
     // (undocumented)
-    wikipediaName?: string;
+    readonly wikipediaName: string;
 }
 
 // @public (undocumented)
