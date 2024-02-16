@@ -48,4 +48,8 @@ import {_faf8f8} from './colors/faf8f8';
 addColor(_faf8f8);
 export {_faf8f8};
 
+import {_fce4ec} from "./colors/fce4ec";
+addColor(_fce4ec);
+export {_fce4ec};
+
 export {paletteColors};
