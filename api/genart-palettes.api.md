@@ -54,11 +54,11 @@ export const mutedChristmas: Palette;
 // @public (undocumented)
 export interface Palette {
     // (undocumented)
-    colors: PaletteColor[];
+    readonly colors: PaletteColor[];
     // (undocumented)
-    name: string;
+    readonly name: string;
     // (undocumented)
-    source: string;
+    readonly source: string;
 }
 
 // @public (undocumented)

@@ -22,9 +22,9 @@ import {PaletteColor} from '../color';
  * @public
  */
 interface Palette {
-    name: string,
-    source: string,
-    colors: PaletteColor[]
+    readonly name: string,
+    readonly source: string,
+    readonly colors: PaletteColor[]
 }
 
 export {type Palette};
