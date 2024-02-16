@@ -15,3 +15,17 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import {Palette} from "../../../palette";
+
+/**
+ * @public
+ */
+const brightChristmas: Palette = {
+    name: 'bright christmas',
+    source: 'https://www.color-hex.com/color-palette/96876',
+    colors: [
+        // TODO - add colors from source
+    ]
+}
+
+export {brightChristmas};
