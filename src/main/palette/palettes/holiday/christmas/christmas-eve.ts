@@ -20,12 +20,12 @@ import {Palette} from "../../../palette";
 /**
  * @public
  */
-const brightChristmas: Palette = {
-    name: 'bright christmas',
+const christmasEve: Palette = {
+    name: 'christmas eve',
     source: 'https://www.color-hex.com/color-palette/96876',
     colors: [
         // TODO - add colors from source
     ]
 };
 
-export {brightChristmas};
+export {christmasEve};
