@@ -20,13 +20,13 @@ import {PaletteColor} from "../palette-color";
 /**
  * @public
  */
-const _fce4ec: PaletteColor = {
-    hexString: '#FCE4EC',
-    rgb: {r: 252, g: 228, b: 236},
-    hsl: {h: 340, s: 80, l: 94},
-    name: 'hepatica',
-    htmlName: 'mistyrose',
-    wikipediaName: 'piggy pink'
-}
+const _f8bbd0: PaletteColor = {
+    hexString: '#F8BBD0',
+    rgb: {r: 248, g: 187, b: 208},
+    hsl: {h: 339, s: 81, l: 85},
+    name: 'dahlia delight',
+    htmlName: 'pink',
+    wikipediaName: 'orchid pink'
+};
 
-export {_fce4ec}
+export {_f8bbd0};

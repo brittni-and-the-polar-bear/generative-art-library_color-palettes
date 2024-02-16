@@ -48,6 +48,15 @@ describe('colors tests', (): void => {
     );
 
     test.each([
+        {hexString: '#F8BBD0'}
+    ])('$# successful addition of pink color: $hexString',
+        ({hexString}): void => {
+            expect(paletteColors).toBeTruthy();
+            expect(new Set<string>(paletteColors.keys)).toContain(hexString);
+        }
+    );
+
+    test.each([
         {hexString: '#FAF8F8'},
         {hexString: '#FCE4EC'}
     ])('$# successful addition of white color: $hexString',
