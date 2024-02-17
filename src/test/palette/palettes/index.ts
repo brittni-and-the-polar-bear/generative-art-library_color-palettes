@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 Brittni Watkins.
+ * Copyright (C) 2024 brittni and the polar bear LLC.
  *
  * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,8 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {christmasPalettes, Palette} from "../../../main";
-import {StringMap} from "@batpb/genart-base";
+import {StringMap} from '@batpb/genart-base';
+
+import {Palette, PaletteColor} from '../../../main';
 
 export function checkForValidPalette(palette: Palette): void {
     expect(palette).toBeTruthy();
@@ -25,17 +26,30 @@ export function checkForValidPalette(palette: Palette): void {
     expect(palette.source).toBeTruthy();
 }
 
-export function checkForValidPaletteMap(palettes: StringMap<Palette>): void {
-    expect(palettes).toBeTruthy();
-    const keys: string[] = Array.from(palettes.keys);
-    const values: Palette[] = Array.from(palettes.values);
-    expect(keys.length).toBeGreaterThan(0);
-    expect(values.length).toBeGreaterThan(0);
-    expect(values.length).toBe(keys.length);
-}
-
 export function checkForPaletteInMap(palette: Palette, palettes: StringMap<Palette>): void {
     expect(palettes).toBeTruthy();
     checkForValidPalette(palette);
-    expect(new Set<string>(christmasPalettes.keys)).toContain(palette.name);
+    expect(new Set<string>(palettes.keys)).toContain(palette.name);
+}
+
+export function buildPaletteColorTestArray(colors: PaletteColor[]):
+    ({color: PaletteColor, hexString: string})[] {
+    const testArray: ({color: PaletteColor, hexString: string})[] = [];
+
+    for (const c of colors) {
+        testArray.push({color: c, hexString: c.hexString});
+    }
+
+    return testArray;
+}
+
+export function buildPaletteTestArray(palettes: Palette[]):
+    ({palette: Palette, name: string})[] {
+    const testArray: ({palette: Palette, name: string})[] = [];
+
+    for (const p of palettes) {
+        testArray.push({palette: p, name: p.name});
+    }
+
+    return testArray;
 }

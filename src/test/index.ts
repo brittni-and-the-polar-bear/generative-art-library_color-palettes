@@ -15,5 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color';
-export * from './colors';
+import {StringMap} from '@batpb/genart-base';
+
+import {Palette, PaletteColor} from '../main';
+
+export function checkForValidStringMap(map: StringMap<Palette|PaletteColor>): void {
+    expect(map).toBeTruthy();
+    const keys: string[] = Array.from(map.keys);
+    const values: (Palette|PaletteColor)[] = Array.from(map.values);
+    expect(keys.length).toBeGreaterThan(0);
+    expect(values.length).toBeGreaterThan(0);
+    expect(values.length).toBe(keys.length);
+}

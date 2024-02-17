@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 Brittni Watkins.
+ * Copyright (C) 2024 brittni and the polar bear LLC.
  *
  * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -22,9 +22,9 @@ import {PaletteColor} from '../color';
  * @public
  */
 interface Palette {
-    name: string,
-    source: string,
-    colors: PaletteColor[]
+    readonly name: string,
+    readonly source: string,
+    readonly colors: PaletteColor[]
 }
 
 export {type Palette};

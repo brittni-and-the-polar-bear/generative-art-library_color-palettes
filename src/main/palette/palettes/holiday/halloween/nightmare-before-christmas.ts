@@ -15,5 +15,14 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color';
-export * from './colors';
+import {Palette} from "../../../palette";
+
+const NightmareBeforeChristmas: Palette = {
+    name: 'nightmare before christmas',
+    source: 'https://www.color-hex.com/color-palette/56388',
+    colors: [
+        // TODO - add colors from source
+    ]
+};
+
+export {NightmareBeforeChristmas};

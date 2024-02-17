@@ -15,5 +15,14 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color';
-export * from './colors';
+import {Palette} from "../../../palette";
+
+const christmasSnow: Palette = {
+    name: 'christmas snow',
+    source: 'https://www.color-hex.com/color-palette/78520',
+    colors: [
+        // TODO - add colors from source
+    ]
+};
+
+export {christmasSnow};

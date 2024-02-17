@@ -15,5 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color';
-export * from './colors';
+import {PaletteColor} from "../palette-color";
+
+/**
+ * @public
+ */
+const _fce4ec: PaletteColor = {
+    hexString: '#FCE4EC',
+    rgb: {r: 252, g: 228, b: 236},
+    hsl: {h: 340, s: 80, l: 94},
+    name: 'hepatica',
+    htmlName: 'mistyrose',
+    wikipediaName: 'piggy pink'
+}
+
+export {_fce4ec}

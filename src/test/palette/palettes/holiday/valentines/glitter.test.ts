@@ -15,5 +15,28 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color';
-export * from './colors';
+import {buildPaletteColorTestArray, checkForValidPalette} from "../../index";
+
+import {_ec407a, _f06292, _f48fb1, _f8bbd0, _fce4ec, glitter} from "../../../../../main";
+
+describe('glitter palette tests', (): void => {
+    test('glitter palette exists', (): void => {
+        checkForValidPalette(glitter);
+    })
+
+    test.each(
+        buildPaletteColorTestArray(
+            [
+                _fce4ec,
+                _f8bbd0,
+                _f48fb1,
+                _f06292,
+                _ec407a
+            ]
+        )
+    )('$# color $hexString present in glitter palette',
+        ({color}): void => {
+            expect(glitter.colors).toContain(color);
+        }
+    );
+});

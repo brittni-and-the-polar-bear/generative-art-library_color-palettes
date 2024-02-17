@@ -15,5 +15,26 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color';
-export * from './colors';
+
+import {glitter, valentinesPalettes} from "../../../../../main";
+
+import {checkForValidStringMap} from "../../../../index";
+import {buildPaletteTestArray, checkForPaletteInMap} from "../../index";
+
+describe("valentine's palettes test", (): void => {
+    test("valentine's palettes map exists", (): void => {
+        checkForValidStringMap(valentinesPalettes);
+    });
+
+    test.each(
+        buildPaletteTestArray(
+            [
+                glitter
+            ]
+        )
+    )("$# successful addition of valentine's palette: $name",
+        ({palette}): void => {
+            checkForPaletteInMap(palette, valentinesPalettes);
+        }
+    );
+});

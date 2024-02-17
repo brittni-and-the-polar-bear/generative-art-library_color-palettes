@@ -15,5 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color';
-export * from './colors';
+import {PaletteColor} from "../palette-color";
+
+/**
+ * @public
+ */
+const _f06292: PaletteColor = {
+    hexString: '#F06292',
+    rgb: {r: 240, g: 98, b: 146},
+    hsl: {h: 340, s: 83, l: 66},
+    name: 'medium pink',
+    htmlName: 'palevioletred',
+    wikipediaName: 'violet-red'
+};
+
+export {_f06292};
