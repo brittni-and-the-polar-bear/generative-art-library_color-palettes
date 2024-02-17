@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023-2024 Brittni Watkins.
+ * Copyright (C) 2023-2024 brittni and the polar bear LLC.
  *
  * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -44,8 +44,28 @@ import {_cd1624} from './colors/cd1624';
 addColor(_cd1624);
 export {_cd1624};
 
+import {_ec407a} from './colors/ec407a';
+addColor(_ec407a);
+export {_ec407a};
+
+import {_f06292} from './colors/f06292';
+addColor(_f06292);
+export {_f06292};
+
+import {_f48fb1} from './colors/f48fb1';
+addColor(_f48fb1);
+export {_f48fb1};
+
+import {_f8bbd0} from './colors/f8bbd0';
+addColor(_f8bbd0);
+export {_f8bbd0};
+
 import {_faf8f8} from './colors/faf8f8';
 addColor(_faf8f8);
 export {_faf8f8};
+
+import {_fce4ec} from './colors/fce4ec';
+addColor(_fce4ec);
+export {_fce4ec};
 
 export {paletteColors};

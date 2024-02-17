@@ -15,5 +15,17 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color';
-export * from './colors';
+import {Palette} from "../../../palette";
+
+/**
+ * @public
+ */
+const christmasEve: Palette = {
+    name: 'christmas eve',
+    source: 'https://www.color-hex.com/color-palette/96876',
+    colors: [
+        // TODO - add colors from source
+    ]
+};
+
+export {christmasEve};

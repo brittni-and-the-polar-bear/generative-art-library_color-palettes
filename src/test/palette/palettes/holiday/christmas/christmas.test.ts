@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 Brittni Watkins.
+ * Copyright (C) 2024 brittni and the polar bear LLC.
  *
  * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,17 +15,24 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {christmasPalettes, mutedChristmas} from "../../../../../main";
-import {checkForPaletteInMap, checkForValidPaletteMap} from "../../index";
+import {christmasPalettes, mutedChristmas} from '../../../../../main';
+
+import {checkForValidStringMap} from '../../../../index';
+import {buildPaletteTestArray, checkForPaletteInMap} from '../../index';
+
 
 describe('christmas palettes test', (): void => {
     test('christmas palettes map exists', (): void => {
-        checkForValidPaletteMap(christmasPalettes);
+        checkForValidStringMap(christmasPalettes);
     });
 
-    test.each([
-        {palette: mutedChristmas, name: mutedChristmas.name}
-    ])('$# successful addition of palette: $name',
+    test.each(
+        buildPaletteTestArray(
+            [
+                mutedChristmas
+            ]
+        )
+    )('$# successful addition of palette: $name',
         ({palette}): void => {
             checkForPaletteInMap(palette, christmasPalettes);
         }

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 Brittni Watkins.
+ * Copyright (C) 2024 brittni and the polar bear LLC.
  *
  * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -22,7 +22,6 @@ import {Palette, addPalette} from "../../../palette";
  * @public
  */
 const christmasPalettes: StringMap<Palette> = new StringMap<Palette>();
-
 const paletteMapName: string = 'christmas palettes';
 
 import {mutedChristmas} from './muted-christmas';

@@ -15,5 +15,14 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color';
-export * from './colors';
+import {Palette} from "../../../palette";
+
+const shine: Palette = {
+    name: 'shine',
+    source: 'https://culrs.com/palette/f4357bd81b60c2185bad1457880e4f',
+    colors: [
+        // TODO: add colors from source
+    ]
+}
+
+export {shine};

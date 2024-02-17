@@ -15,5 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color';
-export * from './colors';
+import {PaletteColor} from "../palette-color";
+
+/**
+ * @public
+ */
+const _f8bbd0: PaletteColor = {
+    hexString: '#F8BBD0',
+    rgb: {r: 248, g: 187, b: 208},
+    hsl: {h: 339, s: 81, l: 85},
+    name: 'dahlia delight',
+    htmlName: 'pink',
+    wikipediaName: 'orchid pink'
+};
+
+export {_f8bbd0};

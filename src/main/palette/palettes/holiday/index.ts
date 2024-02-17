@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 Brittni Watkins.
+ * Copyright (C) 2024 brittni and the polar bear LLC.
  *
  * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -28,5 +28,9 @@ const paletteMapName: string = 'holiday palettes';
 import {christmasPalettes} from './christmas';
 addPalettes(christmasPalettes.values, holidayPalettes, paletteMapName);
 
+import {valentinesPalettes} from './valentines';
+addPalettes(valentinesPalettes.values, holidayPalettes, paletteMapName);
+
 export {holidayPalettes};
 export * from './christmas';
+export * from './valentines';

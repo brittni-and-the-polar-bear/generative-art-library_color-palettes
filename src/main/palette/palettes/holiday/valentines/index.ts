@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 Brittni Watkins.
+ * Copyright (C) 2024 brittni and the polar bear LLC.
  *
  * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -16,3 +16,19 @@
  */
 
 // TODO - make and export valentines palette
+
+import {StringMap} from '@batpb/genart-base';
+
+import {addPalette, Palette} from '../../../palette';
+
+/**
+ * @public
+ */
+const valentinesPalettes: StringMap<Palette> = new StringMap<Palette>();
+const paletteMapName: string = "valentine's day palettes";
+
+import {glitter} from './glitter';
+addPalette(glitter, valentinesPalettes, paletteMapName);
+export {glitter};
+
+export {valentinesPalettes};

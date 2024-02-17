@@ -15,5 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color';
-export * from './colors';
+import {PaletteColor} from "../palette-color";
+
+/**
+ * @public
+ */
+const _f48fb1: PaletteColor = {
+    hexString: '#F48FB1',
+    rgb: {r: 244, g: 143, b: 177},
+    hsl: {h: 340, s: 82, l: 76},
+    name: 'sachet pink',
+    htmlName: 'hotpink',
+    wikipediaName: 'vanilla ice'
+};
+
+export {_f48fb1};

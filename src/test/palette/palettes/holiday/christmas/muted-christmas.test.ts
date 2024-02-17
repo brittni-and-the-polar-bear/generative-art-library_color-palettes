@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 Brittni Watkins.
+ * Copyright (C) 2024 brittni and the polar bear LLC.
  *
  * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -16,20 +16,25 @@
  */
 
 import {_006f57, _23856d, _bb010b, _cd1624, _faf8f8, mutedChristmas} from "../../../../../main";
-import {checkForValidPalette} from "../../index";
+
+import {buildPaletteColorTestArray, checkForValidPalette} from "../../index";
 
 describe('muted christmas palette tests', (): void => {
     test('muted christmas palette exists', (): void => {
         checkForValidPalette(mutedChristmas);
     })
 
-    test.each([
-        {color: _006f57, hexString: _006f57.hexString},
-        {color: _23856d, hexString: _23856d.hexString},
-        {color: _bb010b, hexString: _bb010b.hexString},
-        {color: _cd1624, hexString: _cd1624.hexString},
-        {color: _faf8f8, hexString: _faf8f8.hexString}
-    ])('$# color $hexString present in palette',
+    test.each(
+        buildPaletteColorTestArray(
+            [
+                _006f57,
+                _23856d,
+                _bb010b,
+                _cd1624,
+                _faf8f8
+            ]
+        )
+    )('$# color $hexString present in muted christmas palette',
         ({color}): void => {
             expect(mutedChristmas.colors).toContain(color);
         }

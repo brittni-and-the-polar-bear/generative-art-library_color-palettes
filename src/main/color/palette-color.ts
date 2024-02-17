@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 Brittni Watkins.
+ * Copyright (C) 2024 brittni and the polar bear LLC.
  *
  * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -21,20 +21,20 @@
  * @public
  */
 interface PaletteColor {
-    rgb: {
-        r: number,
-        g: number,
-        b: number
+    readonly rgb: {
+        readonly r: number,
+        readonly g: number,
+        readonly b: number
     },
-    hsl?: {
-        h: number,
-        s: number,
-        l: number
+    readonly hsl: {
+        readonly h: number,
+        readonly s: number,
+        readonly l: number
     }
-    hexString: string,
-    name?: string,
-    htmlName?: string,
-    wikipediaName?: string
+    readonly hexString: string,
+    readonly name: string,
+    readonly htmlName: string,
+    readonly wikipediaName: string
 }
 
 export {type PaletteColor};

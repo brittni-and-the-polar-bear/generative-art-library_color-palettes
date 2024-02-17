@@ -15,5 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette-color';
-export * from './colors';
+import {PaletteColor} from "../palette-color";
+
+/**
+ * @public
+ */
+const _ec407a: PaletteColor = {
+    hexString: '#EC407A',
+    rgb: {r: 236, g: 64, b: 122},
+    hsl: {h: 340, s: 82, l: 59},
+    name: 'cerise pink',
+    htmlName: 'indianred',
+    wikipediaName: 'paradise pink'
+};
+
+export {_ec407a};
