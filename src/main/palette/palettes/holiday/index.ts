@@ -18,9 +18,6 @@
 import {StringMap} from '@batpb/genart-base';
 import {Palette, addPalettes} from "../../palette";
 
-/**
- * @public
- */
 const holidayPalettes: StringMap<Palette> = new StringMap<Palette>();
 
 const paletteMapName: string = 'holiday palettes';

@@ -17,9 +17,6 @@
 
 import {PaletteColor} from "../palette-color";
 
-/**
- * @public
- */
 const _006f57: PaletteColor = {
     rgb: {r: 0, g: 111, b: 87},
     hsl: {h: 167, s: 100, l: 22},

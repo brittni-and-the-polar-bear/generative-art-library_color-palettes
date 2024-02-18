@@ -17,9 +17,6 @@
 
 import {Palette} from "../../../palette";
 
-/**
- * @public
- */
 const christmasEve: Palette = {
     name: 'christmas eve',
     source: 'https://www.color-hex.com/color-palette/96876',

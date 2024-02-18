@@ -17,9 +17,6 @@
 
 import {PaletteColor} from '../palette-color';
 
-/**
- * @public
- */
 const _cd1624: PaletteColor = {
     rgb: {r: 205, g: 22, b: 36},
     hsl: {h: 355, s: 81, l: 45},

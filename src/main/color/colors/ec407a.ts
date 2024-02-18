@@ -17,9 +17,6 @@
 
 import {PaletteColor} from "../palette-color";
 
-/**
- * @public
- */
 const _ec407a: PaletteColor = {
     hexString: '#EC407A',
     rgb: {r: 236, g: 64, b: 122},

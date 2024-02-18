@@ -1,6 +1,6 @@
 # Generative Art Library: Color Palettes
 
-Copyright (C) 2023-2024 brittni and the polar bear LLC
+Copyright (C) 2023-2024 brittni and the polar bear LLC.
 
 Color palette classes and methods for the brittni and the polar bear [generative art library](https://github.com/brittni-and-the-polar-bear/generative-art-library).
 

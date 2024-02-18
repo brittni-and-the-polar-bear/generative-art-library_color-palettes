@@ -18,9 +18,6 @@
 import {StringMap} from '@batpb/genart-base';
 import {PaletteColor} from './palette-color';
 
-/**
- * @public
- */
 const paletteColors: StringMap<PaletteColor> = new StringMap<PaletteColor>();
 
 function addColor(color: PaletteColor): void {
