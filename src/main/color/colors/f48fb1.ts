@@ -17,9 +17,6 @@
 
 import {PaletteColor} from "../palette-color";
 
-/**
- * @public
- */
 const _f48fb1: PaletteColor = {
     hexString: '#F48FB1',
     rgb: {r: 244, g: 143, b: 177},

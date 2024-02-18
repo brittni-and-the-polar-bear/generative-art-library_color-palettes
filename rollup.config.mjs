@@ -15,23 +15,35 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// color names derived from https://colornamer.robertcooper.me/
+import eslint from '@rollup/plugin-eslint';
+import terser from '@rollup/plugin-terser';
 
-interface PaletteColor {
-    readonly rgb: {
-        readonly r: number,
-        readonly g: number,
-        readonly b: number
+import analyzer from 'rollup-plugin-analyzer';
+import ts from 'rollup-plugin-ts';
+
+export default {
+    input: './src/main/index.ts',
+    output: {
+        dir: './out',
+        format: 'umd',
+        name: 'genart-palettes',
+        sourcemap: true,
+        preserveModules: false,
+        globals: {
+            '@batpb/genart-base': 'genartBase'
+        }
     },
-    readonly hsl: {
-        readonly h: number,
-        readonly s: number,
-        readonly l: number
-    }
-    readonly hexString: string,
-    readonly name: string,
-    readonly htmlName: string,
-    readonly wikipediaName: string
-}
-
-export {type PaletteColor};
+    external: ['@batpb/genart-base'],
+    plugins: [
+        eslint({
+            include: ['./src/**/*.ts'],
+            throwOnError: true,
+            throwOnWarning: true
+        }),
+        terser(),
+        analyzer({
+            summaryOnly: true
+        }),
+        ts()
+    ]
+};

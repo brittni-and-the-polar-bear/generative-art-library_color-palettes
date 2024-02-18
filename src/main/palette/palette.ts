@@ -18,9 +18,6 @@
 import {StringMap} from '@batpb/genart-base';
 import {PaletteColor} from '../color';
 
-/**
- * @public
- */
 interface Palette {
     readonly name: string,
     readonly source: string,
@@ -30,10 +27,9 @@ interface Palette {
 export {type Palette};
 
 /**
- * @public
- * @param palette -
- * @param paletteMap -
- * @param paletteMapName -
+ * @param palette
+ * @param paletteMap
+ * @param paletteMapName
  */
 export function addPalette(palette: Palette, paletteMap: StringMap<Palette>, paletteMapName: string): void {
     const key: string = palette.name;
@@ -46,9 +42,9 @@ export function addPalette(palette: Palette, paletteMap: StringMap<Palette>, pal
 
 /**
  * @public
- * @param palettes -
- * @param paletteMap -
- * @param paletteMapName -
+ * @param palettes
+ * @param paletteMap
+ * @param paletteMapName
  */
 export function addPalettes(palettes: IterableIterator<Palette>, paletteMap: StringMap<Palette>, paletteMapName: string): void {
     for (const palette of palettes) {

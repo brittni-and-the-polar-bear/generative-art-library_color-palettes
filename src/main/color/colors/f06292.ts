@@ -17,9 +17,6 @@
 
 import {PaletteColor} from "../palette-color";
 
-/**
- * @public
- */
 const _f06292: PaletteColor = {
     hexString: '#F06292',
     rgb: {r: 240, g: 98, b: 146},
