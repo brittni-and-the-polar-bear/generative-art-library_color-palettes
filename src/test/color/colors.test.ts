@@ -58,9 +58,60 @@ function buildTestColorsArray(): {c: PaletteColor}[] {
     return colors;
 }
 
+function makeHSLKey(hsl: {h: number, s: number, l: number}): string {
+    let key: string = '';
+    key += hsl.h.toString() + '.';
+    key += hsl.s.toString() + '.';
+    key += hsl.l.toString();
+    return key;
+}
+
+function makeRGBKey(rgb: {r: number, g: number, b: number}): string {
+    let key: string = '';
+    key += rgb.r.toString() + '.';
+    key += rgb.g.toString() + '.';
+    key += rgb.b.toString();
+    return key;
+}
+
 describe('colors tests', (): void => {
     test('palette colors map exists', (): void => {
         checkForValidStringMap(paletteColors);
+    });
+
+    test('all colors are unique', (): void => {
+        const hexValues: Set<string> = new Set<string>();
+        const hslValues: Set<string> = new Set<string>();
+        const rgbValues: Set<string> = new Set<string>();
+        const names: Set<string> = new Set<string>();
+        const htmlNames: Set<string> = new Set<string>();
+        const wikiNames: Set<string> = new Set<string>();
+
+        for (const c of paletteColors.values) {
+            const hex: string = c.hexString;
+            expect(hexValues).not.toContain(hex);
+            hexValues.add(hex);
+
+            const hsl: string = makeHSLKey(c.hsl);
+            expect(hslValues).not.toContain(hsl);
+            hslValues.add(hsl);
+
+            const rgb: string = makeRGBKey(c.rgb);
+            expect(rgbValues).not.toContain(rgb);
+            rgbValues.add(rgb);
+
+            const name: string = c.name;
+            expect(names).not.toContain(name);
+            names.add(name);
+
+            const htmlName: string = c.htmlName;
+            expect(htmlNames).not.toContain(htmlName);
+            htmlNames.add(htmlName);
+
+            const wikiName: string = c.wikipediaName;
+            expect(wikiNames).not.toContain(wikiName);
+            wikiNames.add(wikiName);
+        }
     });
 
     test.each(
