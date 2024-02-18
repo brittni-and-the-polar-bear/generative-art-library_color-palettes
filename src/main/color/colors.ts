@@ -29,9 +29,25 @@ import {_006f57} from './colors/006f57';
 addColor(_006f57);
 export {_006f57};
 
+import {_0437f2} from './colors/0437f2';
+addColor(_0437f2);
+export {_0437f2};
+
+import {_0fff4f} from './colors/0fff4f';
+addColor(_0fff4f);
+export {_0fff4f};
+
+import {_121212} from './colors/121212';
+addColor(_121212);
+export {_121212};
+
 import {_23856d} from './colors/23856d';
 addColor(_23856d);
 export {_23856d};
+
+import {_7a00f5} from './colors/7a00f5';
+addColor(_7a00f5);
+export {_7a00f5};
 
 import {_bb010b} from './colors/bb010b';
 addColor(_bb010b);
@@ -64,5 +80,9 @@ export {_faf8f8};
 import {_fce4ec} from './colors/fce4ec';
 addColor(_fce4ec);
 export {_fce4ec};
+
+import {_ff6bb5} from './colors/ff6bb5';
+addColor(_ff6bb5);
+export {_ff6bb5};
 
 export {paletteColors};

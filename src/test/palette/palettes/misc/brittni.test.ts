@@ -15,15 +15,27 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from "../palette-color";
+import {_0437f2, _0fff4f, _121212, _7a00f5, _ff6bb5, brittni} from "../../../../main";
+import {buildPaletteColorTestArray, checkForValidPalette} from "../index";
 
-const _f48fb1: PaletteColor = {
-    hexString: '#F48FB1',
-    rgb: {r: 244, g: 143, b: 177},
-    hsl: {h: 340, s: 82, l: 76},
-    name: 'sachet pink',
-    htmlName: 'hotpink; vanilla ice',
-    wikipediaName: 'vanilla ice'
-};
+describe('brittni palette tests', (): void => {
+    test('brittni palette exists', (): void => {
+        checkForValidPalette(brittni);
+    })
 
-export {_f48fb1};
+    test.each(
+        buildPaletteColorTestArray(
+            [
+                _121212,
+                _0437f2,
+                _ff6bb5,
+                _0fff4f,
+                _7a00f5
+            ]
+        )
+    )('$# color $hexString present in brittni palette',
+        ({color}): void => {
+            expect(brittni.colors).toContain(color);
+        }
+    );
+});

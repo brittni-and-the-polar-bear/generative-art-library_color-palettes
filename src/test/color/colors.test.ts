@@ -129,9 +129,8 @@ describe('colors tests', (): void => {
     );
 
     test.each([
-        {hexString: '#006F57'},
-        {hexString: '#23856D'}
-    ])('$# successful addition of green color: $hexString',
+        {hexString: '#121212'}
+    ])('$# successful addition of black color: $hexString',
         ({hexString}): void => {
             expect(paletteColors).toBeTruthy();
             expect(new Set<string>(paletteColors.keys)).toContain(hexString);
@@ -139,9 +138,19 @@ describe('colors tests', (): void => {
     );
 
     test.each([
-        {hexString: '#BB010B'},
-        {hexString: '#D01625'}
-    ])('$# successful addition of red color: $hexString',
+        {hexString: '#0437F2'}
+    ])('$# successful addition of blue color: $hexString',
+        ({hexString}): void => {
+            expect(paletteColors).toBeTruthy();
+            expect(new Set<string>(paletteColors.keys)).toContain(hexString);
+        }
+    );
+
+    test.each([
+        {hexString: '#006F57'},
+        {hexString: '#0FFF4F'},
+        {hexString: '#23856D'},
+    ])('$# successful addition of green color: $hexString',
         ({hexString}): void => {
             expect(paletteColors).toBeTruthy();
             expect(new Set<string>(paletteColors.keys)).toContain(hexString);
@@ -152,8 +161,28 @@ describe('colors tests', (): void => {
         {hexString: '#EC407A'},
         {hexString: '#F06090'},
         {hexString: '#F48FB1'},
-        {hexString: '#F8BACF'}
+        {hexString: '#F8BACF'},
+        {hexString: '#FF6BB5'}
     ])('$# successful addition of pink color: $hexString',
+        ({hexString}): void => {
+            expect(paletteColors).toBeTruthy();
+            expect(new Set<string>(paletteColors.keys)).toContain(hexString);
+        }
+    );
+
+    test.each([
+        {hexString: '#7A00F5'}
+    ])('$# successful addition of purple color: $hexString',
+        ({hexString}): void => {
+            expect(paletteColors).toBeTruthy();
+            expect(new Set<string>(paletteColors.keys)).toContain(hexString);
+        }
+    );
+
+    test.each([
+        {hexString: '#BB010B'},
+        {hexString: '#D01625'}
+    ])('$# successful addition of red color: $hexString',
         ({hexString}): void => {
             expect(paletteColors).toBeTruthy();
             expect(new Set<string>(paletteColors.keys)).toContain(hexString);

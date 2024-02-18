@@ -15,8 +15,6 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - make and export valentines palette
-
 import {StringMap} from '@batpb/genart-base';
 
 import {addPalette, Palette} from '../../../palette';

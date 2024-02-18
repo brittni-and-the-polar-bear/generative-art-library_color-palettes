@@ -15,15 +15,24 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from "../palette-color";
+import {checkForValidStringMap} from "../../../index";
+import {brittni, miscPalettes} from "../../../../main";
+import {buildPaletteTestArray, checkForPaletteInMap} from "../index";
 
-const _f48fb1: PaletteColor = {
-    hexString: '#F48FB1',
-    rgb: {r: 244, g: 143, b: 177},
-    hsl: {h: 340, s: 82, l: 76},
-    name: 'sachet pink',
-    htmlName: 'hotpink; vanilla ice',
-    wikipediaName: 'vanilla ice'
-};
+describe('miscellaneous palettes test', (): void => {
+    test('miscellaneous palettes map exists', (): void => {
+        checkForValidStringMap(miscPalettes);
+    });
 
-export {_f48fb1};
+    test.each(
+        buildPaletteTestArray(
+            [
+                brittni
+            ]
+        )
+    )('$# successful addition of palette: $name',
+        ({palette}): void => {
+            checkForPaletteInMap(palette, miscPalettes);
+        }
+    );
+});

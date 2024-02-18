@@ -25,5 +25,9 @@ const paletteMapName: string = 'all palettes';
 import {holidayPalettes} from './palettes/holiday';
 addPalettes(holidayPalettes.values, allPalettes, paletteMapName);
 
+import {miscPalettes} from './palettes/misc';
+addPalettes(miscPalettes.values, allPalettes, paletteMapName);
+
 export {allPalettes};
 export * from './palettes/holiday';
+export * from './palettes/misc';

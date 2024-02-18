@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {allPalettes, glitter, mutedChristmas} from '../../main';
+import {allPalettes, brittni, glitter, mutedChristmas} from '../../main';
 
 import {checkForValidStringMap} from '../index';
 import {buildPaletteTestArray, checkForPaletteInMap} from './palettes';
@@ -29,7 +29,8 @@ describe('all palettes test', (): void => {
         buildPaletteTestArray(
             [
                 mutedChristmas, // holiday/christmas
-                glitter // holiday/valentines
+                glitter, // holiday/valentines
+                brittni // misc
             ]
         )
     )('$# successful addition of palette: $name',
