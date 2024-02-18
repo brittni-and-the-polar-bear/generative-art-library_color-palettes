@@ -16,16 +16,16 @@
  */
 
 import {Palette} from "../../../palette";
-import {_ec407a, _f06292, _f48fb1, _f8bbd0, _fce4ec} from "../../../../color";
+import {_ec407a, _f06090, _f48fb1, _f8bacf, _fce4ec} from "../../../../color";
 
 const glitter: Palette = {
     name: 'glitter',
     source: 'https://culrs.com/palette/fce4ecf8bbd0f48fb1f06292ec407a',
     colors: [
         _fce4ec,
-        _f8bbd0,
+        _f8bacf,
         _f48fb1,
-        _f06292,
+        _f06090,
         _ec407a
     ]
 }

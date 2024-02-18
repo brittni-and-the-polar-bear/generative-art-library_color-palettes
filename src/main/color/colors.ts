@@ -37,25 +37,25 @@ import {_bb010b} from './colors/bb010b';
 addColor(_bb010b);
 export {_bb010b};
 
-import {_cd1624} from './colors/cd1624';
-addColor(_cd1624);
-export {_cd1624};
+import {_d01625} from './colors/d01625';
+addColor(_d01625);
+export {_d01625};
 
 import {_ec407a} from './colors/ec407a';
 addColor(_ec407a);
 export {_ec407a};
 
-import {_f06292} from './colors/f06292';
-addColor(_f06292);
-export {_f06292};
+import {_f06090} from './colors/f06090';
+addColor(_f06090);
+export {_f06090};
 
 import {_f48fb1} from './colors/f48fb1';
 addColor(_f48fb1);
 export {_f48fb1};
 
-import {_f8bbd0} from './colors/f8bbd0';
-addColor(_f8bbd0);
-export {_f8bbd0};
+import {_f8bacf} from './colors/f8bacf';
+addColor(_f8bacf);
+export {_f8bacf};
 
 import {_faf8f8} from './colors/faf8f8';
 addColor(_faf8f8);
