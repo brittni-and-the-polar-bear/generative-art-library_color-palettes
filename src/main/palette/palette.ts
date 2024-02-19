@@ -17,6 +17,7 @@
 
 import {StringMap} from '@batpb/genart-base';
 import {PaletteColor} from '../color';
+import {PaletteColorSelector} from './palette-color-selector';
 
 interface Palette {
     readonly name: string,
@@ -26,11 +27,6 @@ interface Palette {
 
 export {type Palette};
 
-/**
- * @param palette
- * @param paletteMap
- * @param paletteMapName
- */
 export function addPalette(palette: Palette, paletteMap: StringMap<Palette>, paletteMapName: string): void {
     const key: string = palette.name;
     paletteMap.setUndefinedKey(
@@ -40,12 +36,6 @@ export function addPalette(palette: Palette, paletteMap: StringMap<Palette>, pal
     );
 }
 
-/**
- * @public
- * @param palettes
- * @param paletteMap
- * @param paletteMapName
- */
 export function addPalettes(palettes: IterableIterator<Palette>, paletteMap: StringMap<Palette>, paletteMapName: string): void {
     for (const palette of palettes) {
         const key: string = palette.name;
@@ -55,4 +45,14 @@ export function addPalettes(palettes: IterableIterator<Palette>, paletteMap: Str
             `palette ${key} already exists in ${paletteMapName}.`
         );
     }
+}
+
+export function getPaletteColorSelectors(paletteMap: StringMap<Palette>): Set<PaletteColorSelector> {
+    const selectors: Set<PaletteColorSelector> = new Set<PaletteColorSelector>();
+
+    for (const palette of paletteMap.values) {
+        selectors.add(new PaletteColorSelector(palette));
+    }
+
+    return selectors;
 }
