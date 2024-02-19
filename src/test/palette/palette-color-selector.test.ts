@@ -15,6 +15,4 @@
  * See the GNU Affero General Public License for more details.
  */
 
-export * from './palette';
-export * from './palette-color-selector';
-export * from './palettes';
+test.todo('We need tests for the color palette selector');
