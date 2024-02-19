@@ -17,26 +17,10 @@
 
 import P5Lib from 'p5';
 import {Color,SketchContext} from '@batpb/genart-base';
-
 import {PaletteColor, paletteColors} from '../../main';
-
-import {checkForValidStringMap} from '../index';
+import {checkForValidStringMap, ColorComponents, p5ColorToColorComponents} from '../index';
 
 const p5: P5Lib = SketchContext.p5;
-
-interface ColorComponents {
-    readonly r: number,
-    readonly g: number,
-    readonly b: number
-}
-
-function p5ColorToColorComponents(color: P5Lib.Color): ColorComponents {
-    return {
-        r: Math.floor(p5.red(color)),
-        g: Math.floor(p5.green(color)),
-        b: Math.floor(p5.blue(color)),
-    };
-}
 
 function withinAmount(value: number, expected: number, range: number): void {
     expect(value).toBeGreaterThanOrEqual(expected - range);

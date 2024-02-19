@@ -15,10 +15,10 @@
  * See the GNU Affero General Public License for more details.
  */
 
+import P5Lib from 'p5';
 import {Color, ColorSelector, randomBoolean, randomInt, SketchContext} from '@batpb/genart-base';
+import {PaletteColor} from '../color';
 import {Palette} from "./palette";
-import P5Lib from "p5";
-import {PaletteColor} from "../color";
 
 const p5: P5Lib = SketchContext.p5;
 
@@ -28,14 +28,14 @@ class PaletteColorSelector implements ColorSelector {
     private readonly _randomOrder: boolean;
 
     constructor(_palette: Palette);
-    constructor(_palette: Palette, randomOrder: boolean, colorCount: number);
+    constructor(_palette: Palette, colorCount: number, randomOrder: boolean);
     constructor(private readonly _palette: Palette,
-                randomOrder?: boolean,
-                colorCount?: number) {
-        if (randomOrder) {
-            this._randomOrder = randomOrder;
-        } else {
+                colorCount?: number,
+                randomOrder?: boolean) {
+        if (randomOrder === undefined) {
             this._randomOrder = randomBoolean();
+        } else {
+            this._randomOrder = randomOrder;
         }
 
         if (!colorCount) {
@@ -59,7 +59,7 @@ class PaletteColorSelector implements ColorSelector {
 
         const p5Color: P5Lib.Color = p5.color(pc.hexString);
         return new Color(p5Color);
-    };
+    }
 
     private get colors(): PaletteColor[] {
         return this._colors;
