@@ -16,8 +16,14 @@
  */
 
 import {checkForValidStringMap} from "../../../index";
-import {brittni, miscPalettes} from "../../../../main";
+import {
+    brittni,
+    getMiscColorSelectors,
+    miscPalettes,
+    PaletteColorSelector
+} from "../../../../main";
 import {buildPaletteTestArray, checkForPaletteInMap} from "../index";
+import {ColorSelector, ColorSelectorManager} from "@batpb/genart-base";
 
 describe('miscellaneous palettes test', (): void => {
     test('miscellaneous palettes map exists', (): void => {
@@ -35,4 +41,19 @@ describe('miscellaneous palettes test', (): void => {
             checkForPaletteInMap(palette, miscPalettes);
         }
     );
+
+    test('color selector manager test', (): void => {
+        const selectors: Set<PaletteColorSelector> = getMiscColorSelectors();
+        const manager: ColorSelectorManager = new ColorSelectorManager();
+        manager.addColorSelectors(selectors);
+        const selectorsArray: PaletteColorSelector[] = Array.from(selectors);
+
+        for (let i: number = 0; i < 50; i++) {
+            const selector: ColorSelector | undefined = manager.getRandomColorSelector();
+
+            if (selector) {
+                expect(selectorsArray).toContainEqual(selector);
+            }
+        }
+    });
 });

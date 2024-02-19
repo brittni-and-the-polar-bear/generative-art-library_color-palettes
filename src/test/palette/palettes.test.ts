@@ -15,10 +15,19 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {allPalettes, brittni, glitter, mutedChristmas} from '../../main';
+import {ColorSelector, ColorSelectorManager} from '@batpb/genart-base';
+import {
+    allPalettes,
+    brittni,
+    getAllPaletteColorSelectors,
+    glitter,
+    mutedChristmas,
+    PaletteColorSelector
+} from '../../main';
 
 import {checkForValidStringMap} from '../index';
 import {buildPaletteTestArray, checkForPaletteInMap} from './palettes';
+
 
 describe('all palettes test', (): void => {
     test('all palettes map exists', (): void => {
@@ -38,4 +47,19 @@ describe('all palettes test', (): void => {
             checkForPaletteInMap(palette, allPalettes);
         }
     );
+
+    test('color selector manager test', (): void => {
+        const selectors: Set<PaletteColorSelector> = getAllPaletteColorSelectors();
+        const manager: ColorSelectorManager = new ColorSelectorManager();
+        manager.addColorSelectors(selectors);
+        const selectorsArray: PaletteColorSelector[] = Array.from(selectors);
+
+        for (let i: number = 0; i < 50; i++) {
+            const selector: ColorSelector | undefined = manager.getRandomColorSelector();
+
+            if (selector) {
+                expect(selectorsArray).toContainEqual(selector);
+            }
+        }
+    });
 });

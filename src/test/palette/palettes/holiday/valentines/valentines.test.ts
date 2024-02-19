@@ -16,10 +16,16 @@
  */
 
 
-import {glitter, valentinesPalettes} from "../../../../../main";
+import {
+    getValentinesColorSelectors,
+    glitter,
+    PaletteColorSelector,
+    valentinesPalettes
+} from "../../../../../main";
 
 import {checkForValidStringMap} from "../../../../index";
 import {buildPaletteTestArray, checkForPaletteInMap} from "../../index";
+import {ColorSelector, ColorSelectorManager} from "@batpb/genart-base";
 
 describe("valentine's palettes test", (): void => {
     test("valentine's palettes map exists", (): void => {
@@ -37,4 +43,19 @@ describe("valentine's palettes test", (): void => {
             checkForPaletteInMap(palette, valentinesPalettes);
         }
     );
+
+    test('color selector manager test', (): void => {
+        const selectors: Set<PaletteColorSelector> = getValentinesColorSelectors();
+        const manager: ColorSelectorManager = new ColorSelectorManager();
+        manager.addColorSelectors(selectors);
+        const selectorsArray: PaletteColorSelector[] = Array.from(selectors);
+
+        for (let i: number = 0; i < 50; i++) {
+            const selector: ColorSelector | undefined = manager.getRandomColorSelector();
+
+            if (selector) {
+                expect(selectorsArray).toContainEqual(selector);
+            }
+        }
+    });
 });
