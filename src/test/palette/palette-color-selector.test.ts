@@ -17,7 +17,7 @@
 
 import P5Lib from 'p5';
 import {Color, SketchContext} from '@batpb/genart-base';
-import {_0fff4f, _121212, brittni, glitter, mutedChristmas, Palette, PaletteColorSelector,} from '../../main';
+import {_0fff4f, _121212, brittni, glitter, mutedChristmas, Palette, PaletteColorSelector} from '../../main';
 import {ColorComponents, colorToColorComponents, p5ColorToColorComponents} from '../index';
 
 const p5: P5Lib = SketchContext.p5;

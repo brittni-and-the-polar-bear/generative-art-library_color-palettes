@@ -16,7 +16,7 @@
  */
 
 import P5Lib from 'p5';
-import {Color, ColorSelector, randomBoolean, randomInt, SketchContext} from '@batpb/genart-base';
+import {Color, ColorSelector, Random, SketchContext} from '@batpb/genart-base';
 import {PaletteColor} from '../color';
 import {Palette} from "./palette";
 
@@ -32,14 +32,10 @@ class PaletteColorSelector implements ColorSelector {
     constructor(private readonly _palette: Palette,
                 colorCount?: number,
                 randomOrder?: boolean) {
-        if (randomOrder === undefined) {
-            this._randomOrder = randomBoolean();
-        } else {
-            this._randomOrder = randomOrder;
-        }
+        this._randomOrder = randomOrder ?? Random.randomBoolean();
 
         if (!colorCount) {
-            colorCount = randomInt(2, this._palette.colors.length + 1);
+            colorCount = Random.randomInt(2, this._palette.colors.length + 1); // randomInt is not inclusive on the max
         }
 
         colorCount = p5.constrain(colorCount, 2, this._palette.colors.length);
@@ -49,11 +45,10 @@ class PaletteColorSelector implements ColorSelector {
     public getColor(): Color {
         let pc: PaletteColor;
 
-        if (this.randomOrder) {
-            const i: number = randomInt(0, this.colors.length);
-            pc = this.colors[i];
+        if (this._randomOrder) {
+            pc = Random.randomElement(this._colors) ?? this._colors[0];
         } else {
-            pc = this.colors[this.currentIndex];
+            pc = this._colors[this._currentIndex];
             this.incrementCurrentIndex();
         }
 
@@ -61,47 +56,27 @@ class PaletteColorSelector implements ColorSelector {
         return new Color(p5Color);
     }
 
-    private get colors(): PaletteColor[] {
-        return this._colors;
-    }
-
-    private set colors(colors: PaletteColor[]) {
-        this._colors = colors;
-    }
-
-    private get currentIndex(): number {
-        return this._currentIndex;
-    }
-
-    private get palette(): Palette {
-        return this._palette;
-    }
-
-    private get randomOrder(): boolean {
-        return this._randomOrder;
-    }
-
     private chooseColors(count: number): void {
-        if (count == this.palette.colors.length) {
-            this.colors = Array.from(this.palette.colors);
+        if (count === this._palette.colors.length) {
+            this._colors = Array.from(this._palette.colors);
         } else {
             const colorIndices: number[] = [];
-            for (let i: number = 0; i < this.palette.colors.length; i++) {
+            for (let i: number = 0; i < this._palette.colors.length; i++) {
                 colorIndices.push(i);
             }
 
             for (let i: number = 0; i < count; i++) {
-                const index: number = randomInt(0, colorIndices.length);
+                const index: number = Random.randomInt(0, colorIndices.length);
                 const colorIndex: number = colorIndices[index];
-                const color: PaletteColor = this.palette.colors[colorIndex];
-                this.colors.push(color);
+                const color: PaletteColor = this._palette.colors[colorIndex];
+                this._colors.push(color);
                 colorIndices.splice(index, 1);
             }
         }
     }
 
     private incrementCurrentIndex(): void {
-        this._currentIndex = (this.currentIndex + 1) % this.colors.length;
+        this._currentIndex = (this._currentIndex + 1) % this._colors.length;
     }
 }
 
