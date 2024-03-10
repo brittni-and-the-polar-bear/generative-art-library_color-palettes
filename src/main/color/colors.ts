@@ -65,6 +65,10 @@ import {_f06090} from './colors/f06090';
 addColor(_f06090);
 export {_f06090};
 
+import {_f0f3f4} from './colors/f0f3f4';
+addColor(_f0f3f4);
+export {_f0f3f4};
+
 import {_f48fb1} from './colors/f48fb1';
 addColor(_f48fb1);
 export {_f48fb1};

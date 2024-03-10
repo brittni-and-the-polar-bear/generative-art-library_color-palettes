@@ -16,14 +16,15 @@
  */
 
 import {Palette} from "../../palette";
-import {_fafeff} from "../../../color";
+import {_f0f3f4, _fafeff} from "../../../color";
 
 const blueLily: Palette = {
     name: 'blue lily',
     source: 'https://www.color-hex.com/color-palette/1040636',
     colors: [
-        // TODO - add colors
+        _f0f3f4,
         _fafeff
+        // TODO - add colors
     ]
 }
 

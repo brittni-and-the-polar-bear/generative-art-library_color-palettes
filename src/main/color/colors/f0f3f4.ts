@@ -15,15 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from '../palette-color';
+import {PaletteColor} from "../palette-color";
 
-const _fafeff: PaletteColor = {
-    hexString: '#FAFEFF',
-    rgb: {r: 250, g: 254, b: 255},
-    hsl: {h: 192, s: 100, l: 99},
-    name: 'polar bear in a blizzard',
-    htmlName: 'white',
-    wikipediaName: 'white'
-}
+const _f0f3f4: PaletteColor = {
+    hexString: '#F0F3F4',
+    rgb: {r: 240, g: 243, b: 244},
+    hsl: {h: 195, s: 15, l: 95},
+    name: 'zappy zebra',
+    htmlName: 'whitesmoke',
+    wikipediaName: 'cultured pearl'
+};
 
-export {_fafeff};
+export {_f0f3f4};

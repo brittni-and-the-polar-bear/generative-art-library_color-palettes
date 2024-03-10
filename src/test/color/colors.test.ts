@@ -174,6 +174,7 @@ describe('colors tests', (): void => {
     );
 
     test.each([
+        {hexString: '#F0F3F4'},
         {hexString: '#FAF8F8'},
         {hexString: '#FAFEFF'},
         {hexString: '#FCE4EC'}
