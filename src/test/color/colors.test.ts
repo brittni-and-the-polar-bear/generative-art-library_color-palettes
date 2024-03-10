@@ -175,6 +175,7 @@ describe('colors tests', (): void => {
 
     test.each([
         {hexString: '#FAF8F8'},
+        {hexString: '#FAFEFF'},
         {hexString: '#FCE4EC'}
     ])('$# successful addition of white color: $hexString',
         ({hexString}): void => {
