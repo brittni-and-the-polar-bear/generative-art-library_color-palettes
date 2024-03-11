@@ -122,7 +122,8 @@ describe('colors tests', (): void => {
     );
 
     test.each([
-        {hexString: '#0437F2'}
+        {hexString: '#0437F2'},
+        {hexString: '#7DCED8'}
     ])('$# successful addition of blue color: $hexString',
         ({hexString}): void => {
             expect(paletteColors).toBeTruthy();

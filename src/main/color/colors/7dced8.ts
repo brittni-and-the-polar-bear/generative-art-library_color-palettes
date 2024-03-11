@@ -15,18 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Palette} from "../../palette";
-import {_7dced8, _f0f3f4, _fafeff} from "../../../color";
+import {PaletteColor} from "../palette-color";
 
-const blueLily: Palette = {
-    name: 'blue lily',
-    source: 'https://www.color-hex.com/color-palette/1040636',
-    colors: [
-        _f0f3f4,
-        _fafeff,
-        _7dced8
-        // TODO - add colors
-    ]
-}
+const _7dced8: PaletteColor = {
+    hexString: '#7DCED8',
+    rgb: {r: 125, g: 206, b: 216},
+    hsl: {h: 187, s: 54, l: 67},
+    name: 'spray',
+    htmlName: 'skyblue',
+    wikipediaName: 'middle blue'
+};
 
-export {blueLily};
+export {_7dced8};
