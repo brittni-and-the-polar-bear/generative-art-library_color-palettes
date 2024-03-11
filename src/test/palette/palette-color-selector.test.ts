@@ -17,7 +17,16 @@
 
 import P5Lib from 'p5';
 import {Color, SketchContext} from '@batpb/genart-base';
-import {_0fff4f, _121212, brittni, glitter, mutedChristmas, Palette, PaletteColorSelector} from '../../main';
+import {
+    _0fff4f,
+    _121212,
+    brittni,
+    glitter,
+    mutedChristmas,
+    Palette,
+    PaletteColor,
+    PaletteColorSelector
+} from '../../main';
 import {ColorComponents, colorToColorComponents, p5ColorToColorComponents} from '../index';
 
 const p5: P5Lib = SketchContext.p5;
@@ -36,10 +45,10 @@ describe('palette color selector tests', (): void => {
             brittni,
             brittni.colors.length,
             false);
-        for (let i: number = 0; i < brittni.colors.length; i++) {
+        for (const col of brittni.colors) {
             const c: Color = selector.getColor();
             const cComponents: ColorComponents = colorToColorComponents(c);
-            const expected: P5Lib.Color = p5.color(brittni.colors[i].hexString);
+            const expected: P5Lib.Color = p5.color(col.hexString);
             const expectedComponents: ColorComponents = p5ColorToColorComponents(expected);
             expect(cComponents).toEqual(expectedComponents);
         }
@@ -49,6 +58,14 @@ describe('palette color selector tests', (): void => {
         const lastExpected: P5Lib.Color = p5.color(brittni.colors[0].hexString);
         const leComponents: ColorComponents = p5ColorToColorComponents(lastExpected);
         expect(lastComponents).toEqual(leComponents);
+
+        expect(selector.name).toBe(brittni.name + ' palette');
+        expect(selector.isPalette).toBeTruthy();
+        const expectedColors: string[] = brittni.colors.map((pc: PaletteColor) => pc.name);
+
+        for (const c of selector.colorNames) {
+            expect(expectedColors).toContain(c);
+        }
     });
 
     test('palette color selector: glitter, 3 colors, in order', (): void => {
@@ -75,6 +92,14 @@ describe('palette color selector tests', (): void => {
             const expectedComponents: ColorComponents = colorToColorComponents(expected);
             expect(cComponents).toEqual(expectedComponents);
         }
+
+        expect(selector.name).toBe(glitter.name + ' palette');
+        expect(selector.isPalette).toBeTruthy();
+        const expectedColors: string[] = glitter.colors.map((pc: PaletteColor) => pc.name);
+
+        for (const c of selector.colorNames) {
+            expect(expectedColors).toContain(c);
+        }
     });
 
     test('palette color selector: muted christmas palette, max colors, random order', (): void => {
@@ -90,6 +115,14 @@ describe('palette color selector tests', (): void => {
             const c: Color = selector.getColor();
             const cComponents: ColorComponents = colorToColorComponents(c);
             expect(validColors).toContainEqual(cComponents);
+        }
+
+        expect(selector.name).toBe(mutedChristmas.name + ' palette');
+        expect(selector.isPalette).toBeTruthy();
+        const expectedColors: string[] = mutedChristmas.colors.map((pc: PaletteColor) => pc.name);
+
+        for (const c of selector.colorNames) {
+            expect(expectedColors).toContain(c);
         }
     });
 
@@ -107,6 +140,14 @@ describe('palette color selector tests', (): void => {
             const cComponents: ColorComponents = colorToColorComponents(c);
             expect(validColors).toContainEqual(cComponents);
         }
+
+        expect(selector.name).toBe(mutedChristmas.name + ' palette');
+        expect(selector.isPalette).toBeTruthy();
+        const expectedColors: string[] = mutedChristmas.colors.map((pc: PaletteColor) => pc.name);
+
+        for (const c of selector.colorNames) {
+            expect(expectedColors).toContain(c);
+        }
     });
 
     test('palette color selector: glitter palette', (): void => {
@@ -118,6 +159,14 @@ describe('palette color selector tests', (): void => {
             const c: Color = selector.getColor();
             const cComponents: ColorComponents = colorToColorComponents(c);
             expect(validColors).toContainEqual(cComponents);
+        }
+
+        expect(selector.name).toBe(glitter.name + ' palette');
+        expect(selector.isPalette).toBeTruthy();
+        const expectedColors: string[] = glitter.colors.map((pc: PaletteColor) => pc.name);
+
+        for (const c of selector.colorNames) {
+            expect(expectedColors).toContain(c);
         }
     });
 
@@ -137,6 +186,14 @@ describe('palette color selector tests', (): void => {
             const c: Color = selector.getColor();
             const cComponents: ColorComponents = colorToColorComponents(c);
             expect(validColors).toContainEqual(cComponents);
+        }
+
+        expect(selector.name).toBe(palette.name + ' palette');
+        expect(selector.isPalette).toBeTruthy();
+        const expectedColors: string[] = palette.colors.map((pc: PaletteColor) => pc.name);
+
+        for (const c of selector.colorNames) {
+            expect(expectedColors).toContain(c);
         }
     });
 });

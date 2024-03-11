@@ -42,6 +42,24 @@ class PaletteColorSelector implements ColorSelector {
         this.chooseColors(colorCount);
     }
 
+    public get isPalette(): boolean {
+        return true;
+    }
+
+    public get name(): string {
+        let paletteName: string = this._palette.name;
+
+        if (!paletteName.toLowerCase().endsWith(' palette')) {
+            paletteName += ' palette';
+        }
+
+        return paletteName;
+    }
+
+    public get colorNames(): string[] {
+        return this._colors.map((c: PaletteColor) => c.name);
+    }
+
     public getColor(): Color {
         let pc: PaletteColor;
 

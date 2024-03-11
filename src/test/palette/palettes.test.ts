@@ -28,7 +28,6 @@ import {
 import {checkForValidStringMap} from '../index';
 import {buildPaletteTestArray, checkForPaletteInMap} from './palettes';
 
-
 describe('all palettes test', (): void => {
     test('all palettes map exists', (): void => {
         checkForValidStringMap(allPalettes);
