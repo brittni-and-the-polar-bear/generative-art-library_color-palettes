@@ -17,6 +17,7 @@
 
 import {StringMap} from '@batpb/genart-base';
 import {addPalettes, getPaletteColorSelectors, Palette} from "./palette";
+import {PaletteColorSelector} from "./palette-color-selector";
 
 const allPalettes: StringMap<Palette> = new StringMap<Palette>();
 
@@ -26,8 +27,10 @@ import {holidayPalettes} from './palettes/holiday';
 addPalettes(holidayPalettes.values, allPalettes, paletteMapName);
 
 import {miscPalettes} from './palettes/misc';
-import {PaletteColorSelector} from "./palette-color-selector";
 addPalettes(miscPalettes.values, allPalettes, paletteMapName);
+
+import {naturePalettes} from './palettes/nature';
+addPalettes(naturePalettes.values, allPalettes, paletteMapName);
 
 const getAllPaletteColorSelectors = (): Set<PaletteColorSelector> =>
     getPaletteColorSelectors(allPalettes);
@@ -35,3 +38,4 @@ const getAllPaletteColorSelectors = (): Set<PaletteColorSelector> =>
 export {allPalettes, getAllPaletteColorSelectors};
 export * from './palettes/holiday';
 export * from './palettes/misc';
+export * from './palettes/nature';

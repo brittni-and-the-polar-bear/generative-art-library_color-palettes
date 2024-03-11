@@ -17,7 +17,7 @@
 
 import {ColorSelector, ColorSelectorManager} from '@batpb/genart-base';
 import {
-    allPalettes,
+    allPalettes, blueLily,
     brittni,
     getAllPaletteColorSelectors,
     glitter,
@@ -39,7 +39,8 @@ describe('all palettes test', (): void => {
             [
                 mutedChristmas, // holiday/christmas
                 glitter, // holiday/valentines
-                brittni // misc
+                brittni, // misc
+                blueLily // nature
             ]
         )
     )('$# successful addition of palette: $name',

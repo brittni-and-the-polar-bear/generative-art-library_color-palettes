@@ -15,19 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Palette} from "../../palette";
-import {_1d90af, _3a2112, _7dced8, _f0f3f4, _fafeff} from "../../../color";
+import {PaletteColor} from "../palette-color";
 
-const blueLily: Palette = {
-    name: 'blue lily',
-    source: 'https://www.color-hex.com/color-palette/1040636',
-    colors: [
-        _f0f3f4,
-        _fafeff,
-        _7dced8,
-        _1d90af,
-        _3a2112
-    ]
+const _3a2112: PaletteColor = {
+    hexString: '#3A2112',
+    rgb: {r: 58, g: 33, b: 18},
+    hsl: {h: 23, s: 53, l: 15},
+    name: 'black slug',
+    htmlName: 'black; dark sienna',
+    wikipediaName: 'dark sienna'
 };
 
-export {blueLily};
+export {_3a2112};

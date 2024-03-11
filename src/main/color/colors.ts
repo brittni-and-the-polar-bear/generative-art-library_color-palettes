@@ -49,6 +49,10 @@ import {_23856d} from './colors/23856d';
 addColor(_23856d);
 export {_23856d};
 
+import {_3a2112} from './colors/3a2112';
+addColor(_3a2112);
+export {_3a2112};
+
 import {_7a00f5} from './colors/7a00f5';
 addColor(_7a00f5);
 export {_7a00f5};

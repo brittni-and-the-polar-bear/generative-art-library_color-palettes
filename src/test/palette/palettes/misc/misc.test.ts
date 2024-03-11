@@ -44,6 +44,7 @@ describe('miscellaneous palettes test', (): void => {
 
     test('color selector manager test', (): void => {
         const selectors: Set<PaletteColorSelector> = getMiscColorSelectors();
+        expect(selectors).toBeTruthy();
         const manager: ColorSelectorManager = new ColorSelectorManager();
         manager.addColorSelectors(selectors);
         const selectorsArray: PaletteColorSelector[] = Array.from(selectors);

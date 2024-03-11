@@ -26,7 +26,6 @@ import {checkForValidStringMap} from '../../../../index';
 import {buildPaletteTestArray, checkForPaletteInMap} from '../../index';
 import {ColorSelector, ColorSelectorManager} from "@batpb/genart-base";
 
-
 describe('christmas palettes test', (): void => {
     test('christmas palettes map exists', (): void => {
         checkForValidStringMap(christmasPalettes);
@@ -46,6 +45,7 @@ describe('christmas palettes test', (): void => {
 
     test('color selector manager test', (): void => {
         const selectors: Set<PaletteColorSelector> = getChristmasColorSelectors();
+        expect(selectors).toBeTruthy();
         const manager: ColorSelectorManager = new ColorSelectorManager();
         manager.addColorSelectors(selectors);
         const selectorsArray: PaletteColorSelector[] = Array.from(selectors);

@@ -133,6 +133,15 @@ describe('colors tests', (): void => {
     );
 
     test.each([
+        {hexString: '#3A2112'}
+    ])('$# successful addition of brown color: $hexString',
+        ({hexString}): void => {
+            expect(paletteColors).toBeTruthy();
+            expect(new Set<string>(paletteColors.keys)).toContain(hexString);
+        }
+    );
+
+    test.each([
         {hexString: '#006F57'},
         {hexString: '#0FFF4F'},
         {hexString: '#23856D'},

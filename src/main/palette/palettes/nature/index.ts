@@ -15,19 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Palette} from "../../palette";
-import {_1d90af, _3a2112, _7dced8, _f0f3f4, _fafeff} from "../../../color";
+import {StringMap} from "@batpb/genart-base";
+import {addPalette, getPaletteColorSelectors, Palette} from "../../palette";
+import {PaletteColorSelector} from "../../palette-color-selector";
 
-const blueLily: Palette = {
-    name: 'blue lily',
-    source: 'https://www.color-hex.com/color-palette/1040636',
-    colors: [
-        _f0f3f4,
-        _fafeff,
-        _7dced8,
-        _1d90af,
-        _3a2112
-    ]
-};
+const naturePalettes: StringMap<Palette> = new StringMap<Palette>();
+const paletteMapName: string = 'nature palettes';
 
+import {blueLily} from './blue-lily';
+addPalette(blueLily, naturePalettes, paletteMapName);
 export {blueLily};
+
+const getNatureColorSelectors = (): Set<PaletteColorSelector> =>
+    getPaletteColorSelectors(naturePalettes);
+
+export {naturePalettes, getNatureColorSelectors};

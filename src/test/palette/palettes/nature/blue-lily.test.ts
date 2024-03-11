@@ -15,19 +15,27 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {Palette} from "../../palette";
-import {_1d90af, _3a2112, _7dced8, _f0f3f4, _fafeff} from "../../../color";
+import {_1d90af, _3a2112, _7dced8, _f0f3f4, _fafeff, blueLily} from "../../../../main";
+import {buildPaletteColorTestArray, checkForValidPalette} from "../index";
 
-const blueLily: Palette = {
-    name: 'blue lily',
-    source: 'https://www.color-hex.com/color-palette/1040636',
-    colors: [
-        _f0f3f4,
-        _fafeff,
-        _7dced8,
-        _1d90af,
-        _3a2112
-    ]
-};
+describe('blue lily palette tests', (): void => {
+    test('blue lily palette exists', (): void => {
+        checkForValidPalette(blueLily);
+    })
 
-export {blueLily};
+    test.each(
+        buildPaletteColorTestArray(
+            [
+                _f0f3f4,
+                _fafeff,
+                _7dced8,
+                _1d90af,
+                _3a2112
+            ]
+        )
+    )('$# color $hexString present in blue lily palette',
+        ({color}): void => {
+            expect(blueLily.colors).toContain(color);
+        }
+    );
+});
