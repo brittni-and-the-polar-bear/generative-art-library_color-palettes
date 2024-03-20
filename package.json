@@ -52,9 +52,9 @@
   },
   "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes#readme",
   "dependencies": {
-    "@batpb/genart-base": "^0.3.2",
+    "@batpb/genart-base": "^0.4.0",
     "@types/p5": "^1.7.6",
-    "p5": "^1.9.1"
+    "p5": "^1.9.2"
   },
   "devDependencies": {
     "@rollup/plugin-eslint": "^9.0.5",
