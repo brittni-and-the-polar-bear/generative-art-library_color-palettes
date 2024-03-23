@@ -15,15 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from "../palette-color";
+import {StringMap} from "@batpb/genart-base";
+import {addPalette, getPaletteColorSelectors, Palette} from "../../palette";
+import {PaletteColorSelector} from "../../palette-color-selector";
 
-const _f48fb1: PaletteColor = {
-    hexString: '#F48FB1',
-    rgb: {r: 244, g: 143, b: 177},
-    hsl: {h: 340, s: 82, l: 76},
-    name: 'sachet pink',
-    htmlName: 'hotpink; vanilla ice',
-    wikipediaName: 'vanilla ice'
-};
+const naturePalettes: StringMap<Palette> = new StringMap<Palette>();
+const paletteMapName: string = 'nature palettes';
 
-export {_f48fb1};
+import {blueLily} from './blue-lily';
+addPalette(blueLily, naturePalettes, paletteMapName);
+export {blueLily};
+
+const getNatureColorSelectors = (): Set<PaletteColorSelector> =>
+    getPaletteColorSelectors(naturePalettes);
+
+export {naturePalettes, getNatureColorSelectors};

@@ -17,7 +17,7 @@
 
 import {buildPaletteColorTestArray, checkForValidPalette} from "../../index";
 
-import {_ec407a, _f06292, _f48fb1, _f8bbd0, _fce4ec, glitter} from "../../../../../main";
+import {_ec407a, _f06090, _f48fb1, _f8bacf, _fce4ec, glitter} from "../../../../../main";
 
 describe('glitter palette tests', (): void => {
     test('glitter palette exists', (): void => {
@@ -28,9 +28,9 @@ describe('glitter palette tests', (): void => {
         buildPaletteColorTestArray(
             [
                 _fce4ec,
-                _f8bbd0,
+                _f8bacf,
                 _f48fb1,
-                _f06292,
+                _f06090,
                 _ec407a
             ]
         )

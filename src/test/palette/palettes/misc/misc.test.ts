@@ -15,37 +15,35 @@
  * See the GNU Affero General Public License for more details.
  */
 
-
+import {checkForValidStringMap} from "../../../index";
 import {
-    getValentinesColorSelectors,
-    glitter,
-    PaletteColorSelector,
-    valentinesPalettes
-} from "../../../../../main";
-
-import {checkForValidStringMap} from "../../../../index";
-import {buildPaletteTestArray, checkForPaletteInMap} from "../../index";
+    brittni,
+    getMiscColorSelectors,
+    miscPalettes,
+    PaletteColorSelector
+} from "../../../../main";
+import {buildPaletteTestArray, checkForPaletteInMap} from "../index";
 import {ColorSelector, ColorSelectorManager} from "@batpb/genart-base";
 
-describe("valentine's palettes test", (): void => {
-    test("valentine's palettes map exists", (): void => {
-        checkForValidStringMap(valentinesPalettes);
+describe('miscellaneous palettes test', (): void => {
+    test('miscellaneous palettes map exists', (): void => {
+        checkForValidStringMap(miscPalettes);
     });
 
     test.each(
         buildPaletteTestArray(
             [
-                glitter
+                brittni
             ]
         )
-    )("$# successful addition of valentine's palette: $name",
+    )('$# successful addition of palette: $name',
         ({palette}): void => {
-            checkForPaletteInMap(palette, valentinesPalettes);
+            checkForPaletteInMap(palette, miscPalettes);
         }
     );
 
     test('color selector manager test', (): void => {
-        const selectors: Set<PaletteColorSelector> = getValentinesColorSelectors();
+        const selectors: Set<PaletteColorSelector> = getMiscColorSelectors();
         expect(selectors).toBeTruthy();
         const manager: ColorSelectorManager = new ColorSelectorManager();
         manager.addColorSelectors(selectors);

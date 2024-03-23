@@ -15,7 +15,7 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {_006f57, _23856d, _bb010b, _cd1624, _faf8f8, mutedChristmas} from "../../../../../main";
+import {_006f57, _23856d, _bb010b, _d01625, _faf8f8, mutedChristmas} from "../../../../../main";
 
 import {buildPaletteColorTestArray, checkForValidPalette} from "../../index";
 
@@ -30,7 +30,7 @@ describe('muted christmas palette tests', (): void => {
                 _006f57,
                 _23856d,
                 _bb010b,
-                _cd1624,
+                _d01625,
                 _faf8f8
             ]
         )

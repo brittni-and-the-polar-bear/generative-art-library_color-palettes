@@ -16,14 +16,14 @@
  */
 
 import {Palette} from "../../../palette";
-import {_006f57, _23856d, _bb010b, _cd1624, _faf8f8} from '../../../../color';
+import {_006f57, _23856d, _bb010b, _d01625, _faf8f8} from '../../../../color';
 
 const mutedChristmas: Palette = {
     name: 'muted christmas',
     source: 'https://coolors.co/palette/bb010b-cd1624-006f57-23856d-faf8f8',
     colors: [
         _bb010b,
-        _cd1624,
+        _d01625,
         _006f57,
         _23856d,
         _faf8f8

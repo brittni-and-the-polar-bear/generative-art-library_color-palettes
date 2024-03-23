@@ -15,15 +15,27 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from "../palette-color";
+import {_1d90af, _3a2112, _7dced8, _f0f3f4, _fafeff, blueLily} from "../../../../main";
+import {buildPaletteColorTestArray, checkForValidPalette} from "../index";
 
-const _f06292: PaletteColor = {
-    hexString: '#F06292',
-    rgb: {r: 240, g: 98, b: 146},
-    hsl: {h: 340, s: 83, l: 66},
-    name: 'medium pink',
-    htmlName: 'palevioletred',
-    wikipediaName: 'violet-red'
-};
+describe('blue lily palette tests', (): void => {
+    test('blue lily palette exists', (): void => {
+        checkForValidPalette(blueLily);
+    })
 
-export {_f06292};
+    test.each(
+        buildPaletteColorTestArray(
+            [
+                _f0f3f4,
+                _fafeff,
+                _7dced8,
+                _1d90af,
+                _3a2112
+            ]
+        )
+    )('$# color $hexString present in blue lily palette',
+        ({color}): void => {
+            expect(blueLily.colors).toContain(color);
+        }
+    );
+});
