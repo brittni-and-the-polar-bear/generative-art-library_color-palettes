@@ -13,6 +13,8 @@ Color palette classes and methods for the brittni and the polar bear [generative
 ![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/brittni-and-the-polar-bear/generative-art-library_color-palettes)
 ![GitHub License](https://img.shields.io/github/license/brittni-and-the-polar-bear/generative-art-library_color-palettes)
 
+[![Socket Badge](https://socket.dev/api/badge/npm/package/@batpb/genart-palettes)](https://socket.dev/npm/package/@batpb/genart-palettes)
+
 ![NPM Downloads](https://img.shields.io/npm/dw/%40batpb%2Fgenart-palettes)
 
 ![GitHub issues by-label (bug)](https://img.shields.io/github/issues/brittni-and-the-polar-bear/generative-art-library_color-palettes/bug?color=red)

@@ -17,13 +17,13 @@
 
 import {PaletteColor} from "../palette-color";
 
-const _f8bbd0: PaletteColor = {
-    hexString: '#F8BBD0',
-    rgb: {r: 248, g: 187, b: 208},
-    hsl: {h: 339, s: 81, l: 85},
-    name: 'dahlia delight',
-    htmlName: 'pink',
-    wikipediaName: 'orchid pink'
+const _0fff4f: PaletteColor = {
+    hexString: '#0FFF4F',
+    rgb: {r: 15, g: 255, b: 79},
+    hsl: {h: 136, s: 100, l: 53},
+    name: 'cathode green',
+    htmlName: 'springgreen',
+    wikipediaName: 'erin'
 };
 
-export {_f8bbd0};
+export {_0fff4f};

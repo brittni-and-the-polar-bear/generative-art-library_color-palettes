@@ -17,13 +17,13 @@
 
 import {PaletteColor} from "../palette-color";
 
-const _f48fb1: PaletteColor = {
-    hexString: '#F48FB1',
-    rgb: {r: 244, g: 143, b: 177},
-    hsl: {h: 340, s: 82, l: 76},
-    name: 'sachet pink',
-    htmlName: 'hotpink; vanilla ice',
-    wikipediaName: 'vanilla ice'
-};
+const _ff6bb5: PaletteColor = {
+    hexString: '#FF6BB5',
+    rgb: {r: 255, g: 107, b: 181},
+    hsl: {h: 330, s: 100, l: 71},
+    name: 'fen hong pink',
+    htmlName: 'hotpink; hot pink',
+    wikipediaName: 'hot pink'
+}
 
-export {_f48fb1};
+export {_ff6bb5};

@@ -15,9 +15,11 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {StringMap} from '@batpb/genart-base';
-
+import P5Lib from 'p5';
+import {Color, SketchContext, StringMap} from '@batpb/genart-base';
 import {Palette, PaletteColor} from '../main';
+
+const p5: P5Lib = SketchContext.p5;
 
 export function checkForValidStringMap(map: StringMap<Palette|PaletteColor>): void {
     expect(map).toBeTruthy();
@@ -27,3 +29,23 @@ export function checkForValidStringMap(map: StringMap<Palette|PaletteColor>): vo
     expect(values.length).toBeGreaterThan(0);
     expect(values.length).toBe(keys.length);
 }
+
+interface ColorComponents {
+    readonly r: number,
+    readonly g: number,
+    readonly b: number
+}
+
+export function p5ColorToColorComponents(color: P5Lib.Color): ColorComponents {
+    return {
+        r: Math.floor(p5.red(color)),
+        g: Math.floor(p5.green(color)),
+        b: Math.floor(p5.blue(color)),
+    };
+}
+
+export function colorToColorComponents(c: Color): ColorComponents {
+    return {r: c.red, g: c.green, b: c.blue};
+}
+
+export {type ColorComponents};

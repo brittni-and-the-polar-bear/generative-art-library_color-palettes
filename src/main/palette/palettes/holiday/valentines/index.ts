@@ -15,11 +15,9 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - make and export valentines palette
-
 import {StringMap} from '@batpb/genart-base';
-
-import {addPalette, Palette} from '../../../palette';
+import {addPalette, getPaletteColorSelectors, Palette} from '../../../palette';
+import {PaletteColorSelector} from "../../../palette-color-selector";
 
 const valentinesPalettes: StringMap<Palette> = new StringMap<Palette>();
 const paletteMapName: string = "valentine's day palettes";
@@ -28,4 +26,7 @@ import {glitter} from './glitter';
 addPalette(glitter, valentinesPalettes, paletteMapName);
 export {glitter};
 
-export {valentinesPalettes};
+const getValentinesColorSelectors = (): Set<PaletteColorSelector> =>
+    getPaletteColorSelectors(valentinesPalettes);
+
+export {valentinesPalettes, getValentinesColorSelectors};

@@ -24,6 +24,7 @@ export function checkForValidPalette(palette: Palette): void {
     expect(palette.name).toBeTruthy();
     expect(palette.colors).toBeTruthy();
     expect(palette.source).toBeTruthy();
+    expect(palette.colors.length).toBeGreaterThanOrEqual(2);
 }
 
 export function checkForPaletteInMap(palette: Palette, palettes: StringMap<Palette>): void {

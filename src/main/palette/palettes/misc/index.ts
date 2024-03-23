@@ -15,4 +15,18 @@
  * See the GNU Affero General Public License for more details.
  */
 
-// TODO - export all miscellaneous palettes
+import {StringMap} from '@batpb/genart-base';
+import {addPalette, getPaletteColorSelectors, Palette} from '../../palette';
+import {PaletteColorSelector} from '../../palette-color-selector';
+
+const miscPalettes: StringMap<Palette> = new StringMap<Palette>();
+const paletteMapName: string = 'miscellaneous palettes';
+
+import {brittni} from './brittni';
+addPalette(brittni, miscPalettes, paletteMapName);
+export {brittni};
+
+const getMiscColorSelectors = (): Set<PaletteColorSelector> =>
+    getPaletteColorSelectors(miscPalettes);
+
+export {miscPalettes, getMiscColorSelectors};

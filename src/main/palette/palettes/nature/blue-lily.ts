@@ -15,15 +15,19 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from "../palette-color";
+import {Palette} from "../../palette";
+import {_1d90af, _3a2112, _7dced8, _f0f3f4, _fafeff} from "../../../color";
 
-const _f48fb1: PaletteColor = {
-    hexString: '#F48FB1',
-    rgb: {r: 244, g: 143, b: 177},
-    hsl: {h: 340, s: 82, l: 76},
-    name: 'sachet pink',
-    htmlName: 'hotpink; vanilla ice',
-    wikipediaName: 'vanilla ice'
+const blueLily: Palette = {
+    name: 'blue lily',
+    source: 'https://www.color-hex.com/color-palette/1040636',
+    colors: [
+        _f0f3f4,
+        _fafeff,
+        _7dced8,
+        _1d90af,
+        _3a2112
+    ]
 };
 
-export {_f48fb1};
+export {blueLily};

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2023-2024 brittni and the polar bear LLC.
+ * Copyright (C) 2024 brittni and the polar bear LLC.
  *
  * This file is a part of brittni and the polar bear's Generative Art Library,
  * which is released under the GNU Affero General Public License, Version 3.0.
@@ -15,15 +15,15 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {PaletteColor} from '../palette-color';
+import {PaletteColor} from "../palette-color";
 
-const _cd1624: PaletteColor = {
-    rgb: {r: 205, g: 22, b: 36},
-    hsl: {h: 355, s: 81, l: 45},
-    hexString: '#CD1624',
-    name: 'cartoon violence',
-    htmlName: 'crimson',
-    wikipediaName: 'lava'
-}
+const _f06090: PaletteColor = {
+    hexString: '#F06090',
+    rgb: {r: 240, g: 96, b: 144},
+    hsl: {h: 340, s: 83, l: 66},
+    name: 'medium pink',
+    htmlName: 'palevioletred',
+    wikipediaName: 'violet-red'
+};
 
-export {_cd1624};
+export {_f06090};

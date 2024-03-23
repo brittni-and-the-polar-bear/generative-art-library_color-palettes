@@ -15,11 +15,16 @@
  * See the GNU Affero General Public License for more details.
  */
 
-import {christmasPalettes, mutedChristmas} from '../../../../../main';
+import {
+    christmasPalettes,
+    getChristmasColorSelectors,
+    mutedChristmas,
+    PaletteColorSelector
+} from '../../../../../main';
 
 import {checkForValidStringMap} from '../../../../index';
 import {buildPaletteTestArray, checkForPaletteInMap} from '../../index';
-
+import {ColorSelector, ColorSelectorManager} from "@batpb/genart-base";
 
 describe('christmas palettes test', (): void => {
     test('christmas palettes map exists', (): void => {
@@ -37,4 +42,20 @@ describe('christmas palettes test', (): void => {
             checkForPaletteInMap(palette, christmasPalettes);
         }
     );
+
+    test('color selector manager test', (): void => {
+        const selectors: Set<PaletteColorSelector> = getChristmasColorSelectors();
+        expect(selectors).toBeTruthy();
+        const manager: ColorSelectorManager = new ColorSelectorManager();
+        manager.addColorSelectors(selectors);
+        const selectorsArray: PaletteColorSelector[] = Array.from(selectors);
+
+        for (let i: number = 0; i < 50; i++) {
+            const selector: ColorSelector | undefined = manager.getRandomColorSelector();
+
+            if (selector) {
+                expect(selectorsArray).toContainEqual(selector);
+            }
+        }
+    });
 });
