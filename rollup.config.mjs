@@ -33,7 +33,10 @@ export default {
             '@batpb/genart-base': 'genartBase'
         }
     },
-    external: ['@batpb/genart-base'],
+    external: [
+        'p5',
+        '@batpb/genart-base'
+    ],
     plugins: [
         eslint({
             include: ['./src/**/*.ts'],
