@@ -42,7 +42,7 @@ class PaletteColorSelector implements ColorSelector {
         this.chooseColors(colorCount);
     }
 
-    public get isPalette(): boolean {
+    public get hasPalette(): boolean {
         return true;
     }
 

@@ -60,7 +60,7 @@ describe('palette color selector tests', (): void => {
         expect(lastComponents).toEqual(leComponents);
 
         expect(selector.name).toBe(brittni.name + ' palette');
-        expect(selector.isPalette).toBeTruthy();
+        expect(selector.hasPalette).toBeTruthy();
         const expectedColors: string[] = brittni.colors.map((pc: PaletteColor) => pc.name);
 
         for (const c of selector.colorNames) {
@@ -94,7 +94,7 @@ describe('palette color selector tests', (): void => {
         }
 
         expect(selector.name).toBe(glitter.name + ' palette');
-        expect(selector.isPalette).toBeTruthy();
+        expect(selector.hasPalette).toBeTruthy();
         const expectedColors: string[] = glitter.colors.map((pc: PaletteColor) => pc.name);
 
         for (const c of selector.colorNames) {
@@ -118,7 +118,7 @@ describe('palette color selector tests', (): void => {
         }
 
         expect(selector.name).toBe(mutedChristmas.name + ' palette');
-        expect(selector.isPalette).toBeTruthy();
+        expect(selector.hasPalette).toBeTruthy();
         const expectedColors: string[] = mutedChristmas.colors.map((pc: PaletteColor) => pc.name);
 
         for (const c of selector.colorNames) {
@@ -142,7 +142,7 @@ describe('palette color selector tests', (): void => {
         }
 
         expect(selector.name).toBe(mutedChristmas.name + ' palette');
-        expect(selector.isPalette).toBeTruthy();
+        expect(selector.hasPalette).toBeTruthy();
         const expectedColors: string[] = mutedChristmas.colors.map((pc: PaletteColor) => pc.name);
 
         for (const c of selector.colorNames) {
@@ -162,7 +162,7 @@ describe('palette color selector tests', (): void => {
         }
 
         expect(selector.name).toBe(glitter.name + ' palette');
-        expect(selector.isPalette).toBeTruthy();
+        expect(selector.hasPalette).toBeTruthy();
         const expectedColors: string[] = glitter.colors.map((pc: PaletteColor) => pc.name);
 
         for (const c of selector.colorNames) {
@@ -189,7 +189,7 @@ describe('palette color selector tests', (): void => {
         }
 
         expect(selector.name).toBe(palette.name + ' palette');
-        expect(selector.isPalette).toBeTruthy();
+        expect(selector.hasPalette).toBeTruthy();
         const expectedColors: string[] = palette.colors.map((pc: PaletteColor) => pc.name);
 
         for (const c of selector.colorNames) {
