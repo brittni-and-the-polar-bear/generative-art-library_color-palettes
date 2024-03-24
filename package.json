@@ -53,13 +53,14 @@
   },
   "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-library_color_palettes#readme",
   "dependencies": {
-    "@batpb/genart-base": "^0.4.1",
+    "@batpb/genart-base": "file://~/Desktop/npm-test/batpb-genart-base-0.4.1-updates-6.tgz",
     "@types/p5": "^1.7.6",
     "p5": "^1.9.1"
   },
   "devDependencies": {
     "@rollup/plugin-eslint": "^9.0.5",
     "@rollup/plugin-terser": "^0.4.4",
+    "@size-limit/preset-big-lib": "^11.1.2",
     "@types/jest": "^29.5.12",
     "@typescript-eslint/eslint-plugin": "^7.3.1",
     "@typescript-eslint/parser": "^7.3.1",
@@ -69,9 +70,22 @@
     "rollup": "^4.13.0",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-ts": "^3.4.5",
+    "size-limit": "^11.1.2",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "tslib": "^2.6.2",
     "typescript": "^5.4.3"
-  }
+  },
+  "size-limit": [
+    {
+      "path": "./out/index.js",
+      "import": "{ createStore }",
+      "limit": "20 s"
+    },
+    {
+      "path": "./out/index.js",
+      "import": "{ createStore }",
+      "limit": "200 kB"
+    }
+  ]
 }
