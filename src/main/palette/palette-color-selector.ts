@@ -16,7 +16,7 @@
  */
 
 import P5Lib from 'p5';
-import {Color, ColorSelector, Random, SketchContext} from '@batpb/genart-base';
+import {Color, ColorSelector, ColorSelectorType, Random, SketchContext} from '@batpb/genart-base';
 import {PaletteColor} from '../color';
 import {Palette} from './palette';
 
@@ -38,10 +38,6 @@ class PaletteColorSelector extends ColorSelector {
         this.chooseColors(colorCount);
     }
 
-    public override get hasPalette(): boolean {
-        return true;
-    }
-
     public override get name(): string {
         let paletteName: string = this._palette.name;
 
@@ -50,6 +46,10 @@ class PaletteColorSelector extends ColorSelector {
         }
 
         return paletteName;
+    }
+
+    public override get type(): ColorSelectorType {
+        return ColorSelectorType.Palette;
     }
 
     public override get colorNames(): string[] {

@@ -16,7 +16,7 @@
  */
 
 import P5Lib from 'p5';
-import {Color, SketchContext} from '@batpb/genart-base';
+import {Color, ColorSelectorType, SketchContext} from '@batpb/genart-base';
 import {
     _0fff4f,
     _121212,
@@ -60,7 +60,7 @@ describe('palette color selector tests', (): void => {
         expect(lastComponents).toEqual(leComponents);
 
         expect(selector.name).toBe(brittni.name + ' palette');
-        expect(selector.hasPalette).toBeTruthy();
+        expect(selector.type).toBe(ColorSelectorType.Palette);
         const expectedColors: string[] = brittni.colors.map((pc: PaletteColor) => pc.name);
 
         for (const c of selector.colorNames) {
@@ -94,7 +94,7 @@ describe('palette color selector tests', (): void => {
         }
 
         expect(selector.name).toBe(glitter.name + ' palette');
-        expect(selector.hasPalette).toBeTruthy();
+        expect(selector.type).toBe(ColorSelectorType.Palette);
         const expectedColors: string[] = glitter.colors.map((pc: PaletteColor) => pc.name);
 
         for (const c of selector.colorNames) {
@@ -118,7 +118,7 @@ describe('palette color selector tests', (): void => {
         }
 
         expect(selector.name).toBe(mutedChristmas.name + ' palette');
-        expect(selector.hasPalette).toBeTruthy();
+        expect(selector.type).toBe(ColorSelectorType.Palette);
         const expectedColors: string[] = mutedChristmas.colors.map((pc: PaletteColor) => pc.name);
 
         for (const c of selector.colorNames) {
@@ -142,7 +142,7 @@ describe('palette color selector tests', (): void => {
         }
 
         expect(selector.name).toBe(mutedChristmas.name + ' palette');
-        expect(selector.hasPalette).toBeTruthy();
+        expect(selector.type).toBe(ColorSelectorType.Palette);
         const expectedColors: string[] = mutedChristmas.colors.map((pc: PaletteColor) => pc.name);
 
         for (const c of selector.colorNames) {
@@ -162,7 +162,7 @@ describe('palette color selector tests', (): void => {
         }
 
         expect(selector.name).toBe(glitter.name + ' palette');
-        expect(selector.hasPalette).toBeTruthy();
+        expect(selector.type).toBe(ColorSelectorType.Palette);
         const expectedColors: string[] = glitter.colors.map((pc: PaletteColor) => pc.name);
 
         for (const c of selector.colorNames) {
@@ -189,7 +189,7 @@ describe('palette color selector tests', (): void => {
         }
 
         expect(selector.name).toBe(palette.name + ' palette');
-        expect(selector.hasPalette).toBeTruthy();
+        expect(selector.type).toBe(ColorSelectorType.Palette);
         const expectedColors: string[] = palette.colors.map((pc: PaletteColor) => pc.name);
 
         for (const c of selector.colorNames) {
