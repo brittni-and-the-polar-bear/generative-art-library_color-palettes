@@ -1,4 +1,4 @@
-# Generative Art Library: Color Palettes
+# [@batpb/genart-palettes](https://www.npmjs.com/package/@batpb/genart-palettes) - generative art library color palettes package
 
 Copyright (C) 2023-2024 brittni and the polar bear LLC.
 
@@ -9,9 +9,9 @@ Color palette classes and methods for the brittni and the polar bear [generative
 [![CodeQL](https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes/actions/workflows/codeql.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes/actions/workflows/codeql.yml)
 [![Node.js Build and Test](https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes/actions/workflows/node.js.yml/badge.svg)](https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes/actions/workflows/node.js.yml)
 
-![NPM Version](https://img.shields.io/npm/v/%40batpb%2Fgenart-palettes)
+[![NPM Version](https://img.shields.io/npm/v/%40batpb%2Fgenart-palettes)
 ![GitHub Release Date - Published_At](https://img.shields.io/github/release-date/brittni-and-the-polar-bear/generative-art-library_color-palettes)
-![GitHub License](https://img.shields.io/github/license/brittni-and-the-polar-bear/generative-art-library_color-palettes)
+![GitHub License](https://img.shields.io/github/license/brittni-and-the-polar-bear/generative-art-library_color-palettes)](https://www.npmjs.com/package/@batpb/genart-palettes)
 
 [![Socket Badge](https://socket.dev/api/badge/npm/package/@batpb/genart-palettes)](https://socket.dev/npm/package/@batpb/genart-palettes)
 
@@ -26,4 +26,20 @@ Color palette classes and methods for the brittni and the polar bear [generative
 
 ## LICENSE Information
 
-The source code of this project is licensed under the [GNU Affero General Public Version 3.0 License](https://www.gnu.org/licenses/agpl-3.0.en.html). The full text of the license can be found in the LICENSE file of the root directory.
+The source code of this project is licensed under the 
+[GNU Affero General Public Version 3.0 License](https://www.gnu.org/licenses/agpl-3.0.en.html). 
+The full text of the license can be found in the 
+[LICENSE file](https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes/blob/main/LICENSE) 
+of the root directory.
+
+----
+
+# Getting Started
+
+## Install with [npm](https://www.npmjs.com/)
+
+```shell
+npm install @batpb/genart-palettes
+```
+
+----
