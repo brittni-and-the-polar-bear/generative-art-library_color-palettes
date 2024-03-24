@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes.git"
+    "url": "git+https://github.com/brittni-and-the-polar-bear/generative-art-library_color_palettes.git"
   },
   "keywords": [
     "code art",
@@ -49,9 +49,9 @@
   ],
   "license": "AGPL-3.0",
   "bugs": {
-    "url": "https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes/issues"
+    "url": "https://github.com/brittni-and-the-polar-bear/generative-art-library_color_palettes/issues"
   },
-  "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-library_color-palettes#readme",
+  "homepage": "https://github.com/brittni-and-the-polar-bear/generative-art-library_color_palettes#readme",
   "dependencies": {
     "@batpb/genart-base": "^0.4.1",
     "@types/p5": "^1.7.6",
