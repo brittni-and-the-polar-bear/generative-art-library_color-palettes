@@ -25,7 +25,7 @@ const p5: P5Lib = SketchContext.p5;
 class PaletteColorSelector extends ColorSelector {
     private _colors: PaletteColor[] = [];
 
-    constructor(private readonly _palette: Palette,
+    public constructor(private readonly _palette: Palette,
                 colorCount?: number,
                 randomOrder?: boolean) {
         super(randomOrder);
